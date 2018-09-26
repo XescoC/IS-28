@@ -2,7 +2,7 @@
 ## **Ramas - Branches**
 Las ramas son una manera de dividir las etapas de desarrollo en diferentes versiones (_nuevas funcionalidades_) para así poder integrarlas en la rama principal.
 
-![](https://github.com/XescoC/IS-28/raw/master/images/ramas.PNG)
+![](https://github.com/XescoC/IS-28/raw/i72ruvea/images/ramas.PNG)
 
 Ahora procederemos a el aprendizaje de una serie de **comandos** para manejarnos con las Ramas:
 
