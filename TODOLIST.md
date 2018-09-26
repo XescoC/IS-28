@@ -34,3 +34,14 @@
      * Eliminación de un cambio temporal
 
      * Aplicación de un cambio del "stash" 
+
+  **GitHub**
+    * Comandos GitHub
+      * Ver, Editar y Clonar un repositorio remoto
+    * Operaciones con Branches remotos
+      * Creación, copia y eliminacion de una rama remota
+
+
+
+
+
