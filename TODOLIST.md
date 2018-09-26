@@ -20,16 +20,12 @@
 
 
 * 1.1.4 Ramas y 1.1.5 GitHub (Andrés Ruiz Ventura)
- * Ramas
-
-  * Ramas / Branches
-
-  * Creación y modificación de ramas
-     * Creación, renombre y eliminación de rama
-
-     * Integración de ramas
-
-     * Resolución de conflictos
+  * Ramas
+   * Ramas / Branches
+    * Creación y modificación de ramas
+       * Creación, renombre y eliminación de rama
+       * Integración de ramas
+       * Resolución de conflictos
 
   * Cambios temporales
     
