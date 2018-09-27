@@ -11,9 +11,11 @@ principal.
 Ahora procederemos a el aprendizaje de una serie de **comandos** para manejarnos con las Ramas:
 
 
+
 &nbsp
 
 ###### **Comandos Ramas 1**
+
 
 
 &nbsp
@@ -43,9 +45,11 @@ Ahora procederemos a el aprendizaje de una serie de **comandos** para manejarnos
     `git diff "nombre_rama".."nombre_rama"`
 
 
+
     &nbsp
 
 ###### **Comandos Ramas 2**
+
 
 
     &nbsp
@@ -78,9 +82,11 @@ Ahora procederemos a el aprendizaje de una serie de **comandos** para manejarnos
   `git merge --abort`
 
 
+
   &nbsp
 
 ###### **Comandos Ramas 3**
+
 
 
 &nbsp
@@ -113,6 +119,7 @@ Ahora procederemos a el aprendizaje de una serie de **comandos** para manejarnos
    ```
 
 
+
 &nbsp
 
 # **1.1.5 GitHub**
@@ -125,6 +132,7 @@ Ahora procederemos a el aprendizaje de una serie de **comandos** para manejarnos
 
 
 ###### Comandos GitHub 1
+
 
 
 &nbsp
@@ -154,9 +162,11 @@ Ahora procederemos a el aprendizaje de una serie de **comandos** para manejarnos
 
 
 
+
 &nbsp
 
 ###### Comandos GitHub 2
+
 
 
 &nbsp
@@ -176,9 +186,11 @@ Ahora procederemos a el aprendizaje de una serie de **comandos** para manejarnos
       `git clone url`
 
 
+
 &nbsp
 
 **Dar seguimiento a *branches* remotos**
+
 
 
 &nbsp
@@ -203,9 +215,11 @@ Ahora procederemos a el aprendizaje de una serie de **comandos** para manejarnos
       `git pull`
 
 
+
 &nbsp
 
 **Operaciones con *branches* remotos**
+
 
 
 &nbsp
