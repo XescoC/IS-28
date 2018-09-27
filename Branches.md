@@ -9,37 +9,32 @@ Ahora procederemos a el aprendizaje de una serie de **comandos** para manejarnos
 
 
 ###### Comandos Ramas 1
+
+* Ver listado de Ramas disponibles:
+
+  `git branch`
+
+
  * Creación de una Rama:
 
  `git branch "nombre_rama"`
 
 
- * Eliminación de una Rama:
+ *  Movernos de una Rama a otra:
 
- ```Shell
- git branch -d "nombre_rama"
- git branch -D "nombre_rama"
- ```
-
- * Ver listado de Ramas disponibles:
-
-  `git branch`
-
-
-*  Movernos de una Rama a otra:
-
-  `git checkout "nombre_rama"`
+   `git checkout "nombre_rama"`
 
 
 * Crear una Rama y moverse a la creada en un solo paso:
 
-  `git checkout -b "nombre_rama"`
+    `git checkout -b "nombre_rama"`
 
 
 * Comparar Ramas:
 
-  `git diff "nombre_rama".."nombre_rama"`
+    `git diff "nombre_rama".."nombre_rama"`
 
+###### Comandos Ramas 2
 
 * Ver Ramas identicas a la actual:
 
@@ -51,6 +46,14 @@ Ahora procederemos a el aprendizaje de una serie de **comandos** para manejarnos
   `git branch -m "nombre_antiguo" "nombre_nuevo"`
 
 
+* Eliminación de una Rama:
+
+  ```Shell
+  git branch -d "nombre_rama"
+  git branch -D "nombre_rama"
+  ```
+
+
 * Integrar Ramas a la actual:
 
   `git merge "nombre_rama"`
@@ -60,6 +63,7 @@ Ahora procederemos a el aprendizaje de una serie de **comandos** para manejarnos
 
   `git merge --abort`
 
+###### Comandos Ramas 3
 
 * Almacenar cambios temporales:
 
