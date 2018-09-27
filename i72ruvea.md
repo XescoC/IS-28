@@ -3,12 +3,20 @@
 Es la forma para separar la línea actual de desarrollo con respecto a la principal. Normalmente representan versiones del software que posteriormente son integradas a la línea
 principal.
 
+
+&nbsp
+
 ![](https://github.com/XescoC/IS-28/raw/i72ruvea/images/ramas.PNG)
 
 Ahora procederemos a el aprendizaje de una serie de **comandos** para manejarnos con las Ramas:
 
 
+&nbsp
+
 ###### **Comandos Ramas 1**
+
+
+&nbsp
 
 * Ver listado de Ramas disponibles:
 
@@ -34,7 +42,13 @@ Ahora procederemos a el aprendizaje de una serie de **comandos** para manejarnos
 
     `git diff "nombre_rama".."nombre_rama"`
 
+
+    &nbsp
+
 ###### **Comandos Ramas 2**
+
+
+    &nbsp
 
 * Ver Ramas identicas a la actual:
 
@@ -63,7 +77,13 @@ Ahora procederemos a el aprendizaje de una serie de **comandos** para manejarnos
 
   `git merge --abort`
 
+
+  &nbsp
+
 ###### **Comandos Ramas 3**
+
+
+&nbsp
 
 * Almacenar cambios temporales:
 
@@ -92,13 +112,22 @@ Ahora procederemos a el aprendizaje de una serie de **comandos** para manejarnos
    git stash pop "nombre_stash"
    ```
 
+
+&nbsp
+
 # **1.1.5 GitHub**
 ## **GitHub no es Git**
+
+
+&nbsp
 
    ![](https://github.com/XescoC/IS-28/raw/i72ruvea/images/github.PNG)
 
 
 ###### Comandos GitHub 1
+
+
+&nbsp
 
   * Añadir un repositorio remoto:
 
@@ -124,7 +153,13 @@ Ahora procederemos a el aprendizaje de una serie de **comandos** para manejarnos
     `git pull`
 
 
+
+&nbsp
+
 ###### Comandos GitHub 2
+
+
+&nbsp
 
   * Ver *branches* remotos:
 
@@ -141,7 +176,12 @@ Ahora procederemos a el aprendizaje de una serie de **comandos** para manejarnos
       `git clone url`
 
 
+&nbsp
+
 **Dar seguimiento a *branches* remotos**
+
+
+&nbsp
 
   * LOCAL → REMOTO
     1. Cambios en el repositorio local.
@@ -163,7 +203,12 @@ Ahora procederemos a el aprendizaje de una serie de **comandos** para manejarnos
       `git pull`
 
 
+&nbsp
+
 **Operaciones con *branches* remotos**
+
+
+&nbsp
 
   * Creación:
    1. Crear branch local.
