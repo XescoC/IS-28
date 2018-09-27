@@ -73,6 +73,7 @@ Ahora procederemos a el aprendizaje de una serie de **comandos** para manejarnos
 * Listar cambios:
 
   `git stash list`
+  
 
 * Ver contenido de un cambio temporal:
 
