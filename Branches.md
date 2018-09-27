@@ -8,7 +8,7 @@ principal.
 Ahora procederemos a el aprendizaje de una serie de **comandos** para manejarnos con las Ramas:
 
 
-###### Comandos Ramas 1
+###### **Comandos Ramas 1**
 
 * Ver listado de Ramas disponibles:
 
@@ -17,12 +17,12 @@ Ahora procederemos a el aprendizaje de una serie de **comandos** para manejarnos
 
  * Creación de una Rama:
 
- `git branch "nombre_rama"`
+      `git branch "nombre_rama"`
 
 
  *  Movernos de una Rama a otra:
 
-   `git checkout "nombre_rama"`
+      `git checkout "nombre_rama"`
 
 
 * Crear una Rama y moverse a la creada en un solo paso:
@@ -34,7 +34,7 @@ Ahora procederemos a el aprendizaje de una serie de **comandos** para manejarnos
 
     `git diff "nombre_rama".."nombre_rama"`
 
-###### Comandos Ramas 2
+###### **Comandos Ramas 2**
 
 * Ver Ramas identicas a la actual:
 
@@ -63,7 +63,7 @@ Ahora procederemos a el aprendizaje de una serie de **comandos** para manejarnos
 
   `git merge --abort`
 
-###### Comandos Ramas 3
+###### **Comandos Ramas 3**
 
 * Almacenar cambios temporales:
 
