@@ -1,12 +1,14 @@
 # **1.1.4 Ramas**
-## **Ramas - Branches**
-Las ramas son una manera de dividir las etapas de desarrollo en diferentes versiones (_nuevas funcionalidades_) para así poder integrarlas en la rama principal.
+## **Ramas o Branches**
+Es la forma para separar la línea actual de desarrollo con respecto a la principal. Normalmente representan versiones del software que posteriormente son integradas a la línea
+principal.
 
 ![](https://github.com/XescoC/IS-28/raw/i72ruvea/images/ramas.PNG)
 
 Ahora procederemos a el aprendizaje de una serie de **comandos** para manejarnos con las Ramas:
 
 
+###### Comandos Ramas 1
  * Creación de una Rama:
 
  `git branch "nombre_rama"`
