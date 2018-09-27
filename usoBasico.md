@@ -1,8 +1,8 @@
-###Uso básico
+#Uso básico
 
 #####Los tres estados de Git
 
-![](url/localOperations.png)
+![](https://github.com/XescoC/IS-28/raw/usoBasico/images/localOperations.png)
 
 #####Comandos básicos I
 
