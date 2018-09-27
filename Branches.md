@@ -86,7 +86,7 @@ Ahora procederemos a el aprendizaje de una serie de **comandos** para manejarnos
 
 * Aplicar cambio del *stash*:
 
-```Shell
-git stash apply "nombre_stash"
-git stash pop "nombre_stash"
-```
+   ```Shell
+   git stash apply "nombre_stash"
+   git stash pop "nombre_stash"
+   ```
