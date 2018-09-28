@@ -76,7 +76,7 @@ principal.
 
 * Almacenar cambios temporales:
 
-  `git stash save "mensaje"`
+  ` git stash save "mensaje"`
 
 
 * Listar cambios:
