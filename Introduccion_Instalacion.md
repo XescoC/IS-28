@@ -10,12 +10,12 @@
 # Git y GitHub
 
 ### Git
-![](https://github.com/XescoC/IS-28/raw/i72roagi/images/git.png): sistema para el control distribuido de versiones de código. Fundamentalmente permite:
+![](https://github.com/XescoC/IS-28/raw/master/images/git_i72roagi.png): sistema para el control distribuido de versiones de código. Fundamentalmente permite:
 * Dar seguimiento a los cambios realizados sobre un archivo.
 * Almacenar una copia de los cambios.
 
 ### GitHub
-![](https://github.com/XescoC/IS-28/raw/i72roagi/images/github.png): sitio web dónde podemos subir una copia de nuestro repositorio Git.
+![](https://github.com/XescoC/IS-28/raw/master/images/github_i72roagi.png): sitio web dónde podemos subir una copia de nuestro repositorio Git.
 
 # Ventajas
 
