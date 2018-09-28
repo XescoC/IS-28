@@ -6,7 +6,7 @@ principal.
 
 &nbsp
 
-![](https://github.com/XescoC/IS-28/raw/i72ruvea/images/ramas.PNG)
+![](https://github.com/XescoC/IS-28/raw/master/images/ramas.PNG)
 
 ---
 ###### **Comandos Ramas 1**
@@ -106,7 +106,7 @@ principal.
 ## **GitHub no es Git**
 
 
-   ![](https://github.com/XescoC/IS-28/raw/i72ruvea/images/github.PNG)
+   ![](https://github.com/XescoC/IS-28/raw/master/images/github.PNG)
 
 
 ###### Comandos GitHub 1
