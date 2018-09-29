@@ -1,10 +1,10 @@
-#Uso básico
+# Uso básico
 
-#####Los tres estados de Git
+##### Los tres estados de Git
 
 ![](https://github.com/XescoC/IS-28/raw/usoBasico/images/localOperations.png)
 
-#####Comandos básicos I
+##### Comandos básicos I
 
 Iniciar repositorio en un directorio:
 
@@ -26,7 +26,7 @@ Historial de commits:
 
 `git log`
 
-#####**Comandos basicos II**
+##### Comandos basicos II 
 
 Ayuda del listado anterior:
 
@@ -48,7 +48,7 @@ Ver cambios en el directorio:
 
 `git status`
 
-#####Comandos básicos III
+##### Comandos básicos III
 
 Ver la diferencia entre ficheros en el directorio y el repositorio de git:
 
@@ -70,7 +70,7 @@ Mover o renombrar archivos:
 
 `git commit -m "Mensaje"`
 
-#####Comandos básicos IV
+##### Comandos básicos IV
 
 Deshacer cambios con git:
 
@@ -92,7 +92,7 @@ Revertir un commit:
 
 `git revert <id_commit>`
 
-#####Comandos básicos V
+##### Comandos básicos V
 
 Deshacer multiples cambios en el repositorio:
 
@@ -112,7 +112,7 @@ Eliminar archivos que git no controla:
 
 Ignorar archivos en el repositorio: .gitignore
 
-#####Comandos básicos VI
+##### Comandos básicos VI
 
 Listar contenido del repositorio de git:
 
@@ -132,7 +132,7 @@ Log con los tres últimos commits en una línea:
 
 Para más opciones consultar documentación de git.
 
-#####Comandos básicos VII
+##### Comandos básicos VII
 
 Examinar el contenido de un commit:
 
