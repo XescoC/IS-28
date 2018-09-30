@@ -1,4 +1,20 @@
-# Motivación
+# Introducción a Git
+
+### Contenidos
+
+1. Introducción.
+
+2. Instalación y configuración.
+
+3. Uso básico.
+
+4. Ramas.
+
+5. Github.
+
+## 1. Introducción
+
+### Motivación
 * **Código efímero.**
 * **Necesidad de mantener todas las versiones del código fuente.**
 * **Problemas en organizaciones para mantener el código actualizado.**
@@ -7,19 +23,19 @@
 * **Fallos en el disco duro que suponen riesgo de información desactualizada.**
 * **Satisfacer el compromiso de entrega.**
 
-# Git y GitHub
+### Git y GitHub
 
-### Git
+#### Git
 ![](https://github.com/XescoC/IS-28/raw/master/images/git_i72roagi.png): sistema para el control distribuido de versiones de código. Fundamentalmente permite:
 * Dar seguimiento a los cambios realizados sobre un archivo.
 * Almacenar una copia de los cambios.
 
-### GitHub
+#### GitHub
 ![](https://github.com/XescoC/IS-28/raw/master/images/github_i72roagi.png): sitio web dónde podemos subir una copia de nuestro repositorio Git.
 
-# Ventajas
+### Ventajas
 
-### Git
+#### Git
 
 * Habilidad de deshacer cambios.
 * Historial y documentación de cambios.
@@ -27,19 +43,21 @@
 * Habilidad de resolver conflictos entre versiones de distintos programadores.
 * Copias independientes.
 
-### GitHub
+#### GitHub
 
 * Documentación de requerimientos.
 * Ver el avance del desarrollo.
 
-# Instalación
+#### 2. Instalción y configuración
+
+### Instalación
 
 * Para instalar Git: [https://git-scm.com](https://git-scm.com "https://git-scm.com").
 * En el curso se utilizará Git a través de líneas de comandos.
 * Para eclipse existen _plugins_ integrados:  
 [https://www.eclipse.org/egit](https://www.eclipse.org/egit "https://www.eclipse.org/egit").
 
-# Configuración básica
+### Configuración básica
 
 Nombre del administrador:  
 `git config --global user.name "su_nombre"`
@@ -55,13 +73,14 @@ Color de la interfaz:
 
 Listado de la configuración:  
 `git config --list`
-# Uso básico
 
-##### Los tres estados de Git
+## 3. Uso básico
+
+### Los tres estados de Git
 
 ![](https://github.com/XescoC/IS-28/raw/usoBasico/images/localOperations.png)
 
-##### Comandos básicos I
+### Comandos básicos I
 
 Iniciar repositorio en un directorio:
 
@@ -83,7 +102,7 @@ Historial de commits:
 
 `git log`
 
-##### Comandos basicos II 
+### Comandos basicos II 
 
 Ayuda del listado anterior:
 
@@ -105,7 +124,7 @@ Ver cambios en el directorio:
 
 `git status`
 
-##### Comandos básicos III
+### Comandos básicos III
 
 Ver la diferencia entre ficheros en el directorio y el repositorio de git:
 
@@ -127,7 +146,7 @@ Mover o renombrar archivos:
 
 `git commit -m "Mensaje"`
 
-##### Comandos básicos IV
+### Comandos básicos IV
 
 Deshacer cambios con git:
 
@@ -149,7 +168,7 @@ Revertir un commit:
 
 `git revert <id_commit>`
 
-##### Comandos básicos V
+### Comandos básicos V
 
 Deshacer multiples cambios en el repositorio:
 
@@ -169,7 +188,7 @@ Eliminar archivos que git no controla:
 
 Ignorar archivos en el repositorio: .gitignore
 
-##### Comandos básicos VI
+### Comandos básicos VI
 
 Listar contenido del repositorio de git:
 
@@ -189,7 +208,7 @@ Log con los tres últimos commits en una línea:
 
 Para más opciones consultar documentación de git.
 
-##### Comandos básicos VII
+### Comandos básicos VII
 
 Examinar el contenido de un commit:
 
@@ -201,8 +220,12 @@ Comparar un commit con el actual:
 
 Comparar dos commits:
 
-`git diff id..id nombre_archivo`# **1.1.4 Ramas**
-## **Ramas o Branches**
+`git diff id..id nombre_archivo`# 
+
+## 4. Ramas
+
+### **Ramas o Branches**
+
 Es la forma para separar la línea actual de desarrollo con respecto a la principal. Normalmente representan versiones del software que posteriormente son integradas a la línea
 principal.
 
@@ -212,49 +235,49 @@ principal.
 ![](https://github.com/XescoC/IS-28/raw/master/images/ramas.PNG)
 
 ---
-###### **Comandos Ramas 1**
+### **Comandos Ramas 1**
 
 
-* Ver listado de Ramas disponibles:
+Ver listado de Ramas disponibles:
 
   `git branch`
 
 
- * Creación de una Rama:
+Creación de una Rama:
 
       `git branch "nombre_rama"`
 
 
- *  Movernos de una Rama a otra:
+Movernos de una Rama a otra:
 
       `git checkout "nombre_rama"`
 
 
-* Crear una Rama y moverse a la creada en un solo paso:
+Crear una Rama y moverse a la creada en un solo paso:
 
     `git checkout -b "nombre_rama"`
 
 
-* Comparar Ramas:
+Comparar Ramas:
 
     `git diff "nombre_rama".."nombre_rama"`
 
 
-###### **Comandos Ramas 2**
+### **Comandos Ramas 2**
 
 
 
-* Ver Ramas identicas a la actual:
+Ver Ramas identicas a la actual:
 
   `git branch --merged`
 
 
-* Renombrar una Rama:
+Renombrar una Rama:
 
   `git branch -m "nombre_antiguo" "nombre_nuevo"`
 
 
-* Eliminación de una Rama:
+Eliminación de una Rama:
 
   ```Shell
   git branch -d "nombre_rama"
@@ -262,42 +285,42 @@ principal.
   ```
 
 
-* Integrar Ramas a la actual:
+Integrar Ramas a la actual:
 
   `git merge "nombre_rama"`
 
 
-* Resolver conflictos (usualmente utilizado de forma manual):
+Resolver conflictos (usualmente utilizado de forma manual):
 
   `git merge --abort`
 
 
 
-###### **Comandos Ramas 3**
+### **Comandos Ramas 3**
 
 
 
-* Almacenar cambios temporales:
+Almacenar cambios temporales:
 
   ` git stash save "mensaje"`
 
 
-* Listar cambios:
+Listar cambios:
 
   `git stash list`
 
 
-* Ver contenido de un cambio temporal:
+Ver contenido de un cambio temporal:
 
   `git stash show -p "nombre_stash"`
 
 
-* Eliminar un cambio temporal:
+Eliminar un cambio temporal:
 
   `git stash "nombre_stash"`
 
 
-* Aplicar cambio del *stash*:
+Aplicar cambio del *stash*:
 
    ```Shell
    git stash apply "nombre_stash"
@@ -305,56 +328,56 @@ principal.
    ```
 
 
-# **1.1.5 GitHub**
-## **GitHub no es Git**
+## 5. GitHub
+### **GitHub no es Git**
 
 
    ![](https://github.com/XescoC/IS-28/raw/master/images/github.PNG)
 
 
-###### Comandos GitHub 1
+### Comandos GitHub 1
 
 
-  * Añadir un repositorio remoto:
+Añadir un repositorio remoto:
 
     `git remote add origin url`
 
-  * Ver repositorios remotos:
+Ver repositorios remotos:
 
     `git remote -v`
 
 
-  * Eliminar repositorio remoto:
+Eliminar repositorio remoto:
 
     `git remote rm origin`
 
 
-  * Añadir cambios del repositorio local al remoto:
+Añadir cambios del repositorio local al remoto:
 
     `git push -u origin master`
 
 
-  * Añadir cambios del repositorio remoto al local:
+Añadir cambios del repositorio remoto al local:
 
     `git pull`
 
 
 
-###### Comandos GitHub 2
+### Comandos GitHub 2
 
 
 
-  * Ver *branches* remotos:
+Ver *branches* remotos:
 
       `git branch -r`
 
 
-  * Ver todos los *branches*:
+Ver todos los *branches*:
 
       `git pull`
 
 
-  * Clonar un repositorio remoto:
+Clonar un repositorio remoto:
 
       `git clone url`
 
