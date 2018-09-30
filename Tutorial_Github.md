@@ -48,7 +48,7 @@
 * Documentación de requerimientos.
 * Ver el avance del desarrollo.
 
-#### 2. Instalción y configuración
+## 2. Instalación y configuración
 
 ### Instalación
 
@@ -230,7 +230,6 @@ Es la forma para separar la línea actual de desarrollo con respecto a la princi
 principal.
 
 
-&nbsp
 
 ![](https://github.com/XescoC/IS-28/raw/master/images/ramas.PNG)
 
@@ -240,27 +239,27 @@ principal.
 
 Ver listado de Ramas disponibles:
 
-  `git branch`
+`git branch`
 
 
 Creación de una Rama:
 
-      `git branch "nombre_rama"`
+`git branch "nombre_rama"`
 
 
 Movernos de una Rama a otra:
 
-      `git checkout "nombre_rama"`
+`git checkout "nombre_rama"`
 
 
 Crear una Rama y moverse a la creada en un solo paso:
 
-    `git checkout -b "nombre_rama"`
+`git checkout -b "nombre_rama"`
 
 
 Comparar Ramas:
 
-    `git diff "nombre_rama".."nombre_rama"`
+`git diff "nombre_rama".."nombre_rama"`
 
 
 ### **Comandos Ramas 2**
@@ -269,30 +268,30 @@ Comparar Ramas:
 
 Ver Ramas identicas a la actual:
 
-  `git branch --merged`
+`git branch --merged`
 
 
 Renombrar una Rama:
 
-  `git branch -m "nombre_antiguo" "nombre_nuevo"`
+`git branch -m "nombre_antiguo" "nombre_nuevo"`
 
 
 Eliminación de una Rama:
 
-  ```Shell
-  git branch -d "nombre_rama"
-  git branch -D "nombre_rama"
-  ```
+`git branch -d "nombre_rama"`
+
+`git branch -D "nombre_rama"`
+
 
 
 Integrar Ramas a la actual:
 
-  `git merge "nombre_rama"`
+`git merge "nombre_rama"`
 
 
 Resolver conflictos (usualmente utilizado de forma manual):
 
-  `git merge --abort`
+`git merge --abort`
 
 
 
@@ -302,33 +301,33 @@ Resolver conflictos (usualmente utilizado de forma manual):
 
 Almacenar cambios temporales:
 
-  ` git stash save "mensaje"`
+`git stash save "mensaje"`
 
 
 Listar cambios:
 
-  `git stash list`
+`git stash list`
 
 
 Ver contenido de un cambio temporal:
 
-  `git stash show -p "nombre_stash"`
+`git stash show -p "nombre_stash"`
 
 
 Eliminar un cambio temporal:
 
-  `git stash "nombre_stash"`
+`git stash "nombre_stash"`
 
 
 Aplicar cambio del *stash*:
 
-   ```Shell
-   git stash apply "nombre_stash"
-   git stash pop "nombre_stash"
-   ```
+`git stash apply "nombre_stash"`
+
+`git stash pop "nombre_stash"`
 
 
 ## 5. GitHub
+
 ### **GitHub no es Git**
 
 
@@ -340,26 +339,26 @@ Aplicar cambio del *stash*:
 
 Añadir un repositorio remoto:
 
-    `git remote add origin url`
+`git remote add origin url`
 
 Ver repositorios remotos:
 
-    `git remote -v`
+`git remote -v`
 
 
 Eliminar repositorio remoto:
 
-    `git remote rm origin`
+`git remote rm origin`
 
 
 Añadir cambios del repositorio local al remoto:
 
-    `git push -u origin master`
+`git push -u origin master`
 
 
 Añadir cambios del repositorio remoto al local:
 
-    `git pull`
+`git pull`
 
 
 
@@ -369,17 +368,17 @@ Añadir cambios del repositorio remoto al local:
 
 Ver *branches* remotos:
 
-      `git branch -r`
+`git branch -r`
 
 
 Ver todos los *branches*:
 
-      `git pull`
+`git pull`
 
 
 Clonar un repositorio remoto:
 
-      `git clone url`
+`git clone url`
 
 
 **Dar seguimiento a *branches* remotos**
@@ -390,19 +389,19 @@ Clonar un repositorio remoto:
     2. Commit de los cambios.
     3. Añadir cambios al repositorio local
 
-      `git push`
+`git push`
 
 
   * REMOTO → LOCAL
     * Sincronización y unión:
 
-        ```Shell
-        git fetch origin
-        git merge origin/master
-        ```
+`git fetch origin`
+
+`git merge origin/master`
+
     * En un solo paso:
 
-      `git pull`
+`git pull`
 
 
 
@@ -414,12 +413,12 @@ Clonar un repositorio remoto:
    3. Hacer commit.
    4. Copiar el branch al repositorio:
 
-     `git push -u origin branch_remoto`
+`git push -u origin branch_remoto`
 
 * Copia:
 
-     `git checkout -b local remoto`
+`git checkout -b local remoto`
 
 * Eliminación:
 
-     `git push origin -delete branch_remoto`
+`git push origin -delete branch_remoto`
