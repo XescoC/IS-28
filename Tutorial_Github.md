@@ -399,7 +399,7 @@ Clonar un repositorio remoto:
 
 `git merge origin/master`
 
-    * En un solo paso:
+* En un solo paso:
 
 `git pull`
 
