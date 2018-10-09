@@ -1,5 +1,5 @@
 ##  Funcionales:
-* Datos a mostrar: dni, nombre, apellidos, telefono, email corporativo, direccion(calle), curso mas alto, fecha de nacimiento, equipo al q pertenece, **es líder o no.**
+* Datos a mostrar: dni, nombre, apellidos, telefono, email corporativo, direccion(calle), curso mas alto, fecha de nacimiento, equipo al que pertenece, **es líder o no.**
 * Busqueda de usuario, por dni o por apellido
 * Editar datos de usuario
 * Obligatorio linea de comandos
