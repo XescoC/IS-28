@@ -1,0 +1,18 @@
+------------------
+## (ANVERSO)
+**ID**: 006 **Eliminar alumno.**
+
+----------------------------
+Como usuario quiero poder eliminar un alumno.
+
+
+**Prioridad:** 7
+
+-----------------------
+## (REVERSO)
+------------------------
+* Quiero poder buscar el usuario que quiero eliminar por su DNI o su apellido.
+
+* Se debe mostrar confirmación del DNI en caso de conflicto.
+
+----------------------
