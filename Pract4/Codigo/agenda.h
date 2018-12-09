@@ -27,7 +27,11 @@ public:
 		cin >> opcion;
 		return opcion;
 	}
-	
+	int buscarAlumno();
+	int buscarAlumnoDNI(string DNI);
+	int buscarAlumnoApellido(string apellido);
+	int menuBuscarAlumno();
+
 	
 };
 #endif
