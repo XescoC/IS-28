@@ -1,4 +1,4 @@
-###Asignación de tareas:
+### Asignación de tareas:
 
 * Francisco Cuadrado Bastón - XescoC: funciones auxiliares(main.cc, agenda.h), buscar alumno.
 

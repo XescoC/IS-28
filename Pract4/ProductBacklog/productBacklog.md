@@ -1,4 +1,4 @@
-###Prioridad de tareas:
+### Prioridad de tareas:
 
 1. Funciones auxiliares: alumno.h (1h), agenda.h (1h), main.cc (1h).
 
