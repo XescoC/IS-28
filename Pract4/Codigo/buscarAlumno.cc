@@ -34,8 +34,8 @@ int buscarAlumnoDNI(string DNI)
 			return i;
 		}
 	}
-	return -1;
-}
+}	return -1;
+
 int buscarAlumnoApellido(string apellido)
 {
 	int i=-1, tam, contador=0;
