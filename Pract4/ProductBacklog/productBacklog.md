@@ -12,12 +12,14 @@
 
 6. Eliminar alumno (2h)
 
-7. Visualizar lista (2h)
+7. Imprimir grupo (2h)
 
-8. Guardar fichero (2h)
+8. Visualizar lista (2h)
 
-9. Cargar fichero (2h)
+9. Guardar fichero (2h)
 
-10. Guardar copia de seguridad (2h)
+10. Cargar fichero (2h)
 
-11. Cargar copia de seguridad (2h)
+11. Guardar copia de seguridad (2h)
+
+12. Cargar copia de seguridad (2h)
