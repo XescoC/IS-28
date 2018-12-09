@@ -36,7 +36,7 @@ public:
 	string getFecha(){ return fecha_; }
 	void setGrupo(int grupo){ grupo_ = grupo; }
 	int getGrupo(){ return grupo_; }
-	void set(bool lider){ lider_ = lider; }
-	bool get(){ return lider_; }
+	void setLider(bool lider){ lider_ = lider; }
+	bool getLider(){ return lider_; }
 };
 #endif
