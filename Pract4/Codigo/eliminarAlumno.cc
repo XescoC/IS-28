@@ -1,11 +1,6 @@
 //eliminarAlumno.cc
 //Función que elimina del vector de la STL a un alumno
-
-#include <cstdlib>
-#include <iostream>
-#include <string>
-#include <vector>
-#include "Agenda.h"
+#include "agenda.h"
 
 void Agenda::eliminarAlumno()
 {
@@ -13,5 +8,5 @@ void Agenda::eliminarAlumno()
 
 	pos = buscarAlumno();
 	alumnos.erase(pos);
-	std::cout << "Borrado con éxito\n";
+	cout << "Borrado con éxito\n";
 }

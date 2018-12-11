@@ -1,7 +1,8 @@
 #include "agenda.h"
 #include "alumno.h"
 //Función que se encarga de buscar el alumno por DNI o por su primer apellido
-int buscarAlumno()
+//Devuelve la posición del vector en la que se encuentra el alumno o -1 si no encuentra ninguno
+int Agenda::buscarAlumno()
 {
 	int i;
 	do{
@@ -23,11 +24,11 @@ int buscarAlumno()
 	}while(opcion!=0);
 	return i;
 }
-int buscarAlumnoDNI(string DNI)
+int Agenda::buscarAlumnoDNI(string DNI)
 {
 	int i, tam;
 	tam=vector_.size();
-	for ( i = 0; i < tam; ++i)
+	for ( i = 0; i < tam; ++i)//HAY QUE CAMBIARLO
 	{
 		if (vector_[i].DNI==DNI)
 		{
@@ -36,11 +37,11 @@ int buscarAlumnoDNI(string DNI)
 	}
 }	return -1;
 
-int buscarAlumnoApellido(string apellido)
+int Agenda::buscarAlumnoApellido(string apellido)
 {
 	int i=-1, tam, contador=0;
 	tam=vector_.size();
-	for ( i = 0; i < tam; ++i)
+	for ( i = 0; i < tam; ++i)//HAY QUE CAMBIARLO
 	{
 		if (vector_[i].apellido1==apellido)
 		{
@@ -61,7 +62,7 @@ int buscarAlumnoApellido(string apellido)
 		return i;
 	}
 }
-int menuBuscarAlumno()
+int Agenda::menuBuscarAlumno()
 {
 	int opcion;
 	cout << "Buscar alumno:" << endl 

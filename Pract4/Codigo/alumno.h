@@ -4,6 +4,11 @@
 #ifndef ALUMNO_H
 #define ALUMNO_H
 #include <string>
+#include <string>
+#include <cstdlib>
+#include <iostream>
+#include <vector>
+using namespace std;
 
 class Alumno {
 private:

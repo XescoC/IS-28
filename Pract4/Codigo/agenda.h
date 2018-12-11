@@ -3,7 +3,9 @@
 
 #ifndef AGENDA_H
 #define AGENDA_H
-#include <string>
+
+#include "alumno.h"
+
 
 class Agenda {
 private:
@@ -27,10 +29,16 @@ public:
 		cin >> opcion;
 		return opcion;
 	}
-	int buscarAlumno();
-	int buscarAlumnoDNI(string DNI);
-	int buscarAlumnoApellido(string apellido);
-	int menuBuscarAlumno();
+	int Agenda::buscarAlumno();
+	int Agenda::buscarAlumnoDNI(string DNI);
+	int Agenda::buscarAlumnoApellido(string apellido);
+	int Agenda::menuBuscarAlumno();
+	int Agenda::imprimirDatos();
+	void Agenda::añadirAlumno();
+	void Agenda::editarAlumno();
+	void Agenda::eliminarAlumno();
+	//FALTA CONTROL DE ERRORES DE VECTOR COMPLETO Y ERROR AL ENCONTRAR ALUMNO
+
 
 	
 };

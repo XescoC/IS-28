@@ -1,16 +1,14 @@
 #include "alumnos.h"
 #include "agenda.h"
-#include <string>
-using std::cout;
-using std::cin;
-using std::endl;
+
 
 //Función que se encarga de añadir el alumno.
 
-void añadirAlumno(){
+void Agenda::añadirAlumno(){
 	string dni;
 	string nombre;
-	string apellidos;
+	string apellido1;
+	string apellido2;
 	string email;
 	string direccion;
 	int curso;
@@ -38,10 +36,16 @@ for(int i=0; i<150; i++){
 		setNombre(nombre);
 		getNombre();
 
-		cout<<"Introduzca los apellidos del alumno: ";
-		cin>>apellidos;
-		setApellidos(apellidos);
-		getApellidos();
+		cout<<"Introduzca el primer apellido del alumno: ";
+		cin>>apellido1;
+		setApellido1(apellido1);
+		getApellido1();
+
+		cout<<"Introduzca el segundo apellido del alumno: ";
+		cin>>apellido2;
+		setApellido2(apellido2);
+		getApellido2();
+
 
 		cout<<"Introduzca el E-Mail del alumno: ";
 		cin>>email;
