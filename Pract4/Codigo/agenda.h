@@ -21,11 +21,12 @@ public:
 		<< "Opción 2: Añadir alumno" << endl
 		<< "Opción 3: Editar alumno" << endl
 		<< "Opción 4: Eliminar alumno" << endl
-		<< "Opción 5: Mostrar lista de alumnos" << endl
-		<< "Opción 6: Guardar copia de seguridad" << endl
-		<< "Opción 7: Cargar copia de seguridad" << endl
-		<< "Opción 8: Guardar fichero" << endl
-		<< "Opción 9: Cargar fichero" << endl
+		<< "Opción 5: Mostrar grupo" <<endl
+		<< "Opción 6: Mostrar lista de alumnos" << endl
+		<< "Opción 7: Guardar fichero" << endl
+		<< "Opción 8: Cargar fichero" << endl
+		<< "Opción 9: Guardar copia de seguridad" << endl
+		<< "Opción 10: Cargar copia de seguridad" << endl
 		cin >> opcion;
 		return opcion;
 	}
@@ -40,6 +41,9 @@ public:
 	int Agenda::printMenuEdit();
 	void Agenda::eliminarAlumno();
 	void Agenda::imprimirGrupo(int grupo);
+	void Agenda::visualizarLista();
+	void Agenda::guardarFichero();
+	void Agenda::cargarFichero();
 	
 
 

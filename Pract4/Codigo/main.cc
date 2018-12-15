@@ -28,6 +28,12 @@ int main()
 			case 6:
 				visualizarLista();
 				i=true;
+			case 7:
+				guardarFichero();
+				break;
+			case 8:
+				cargarFichero();
+				break;
 		}
 	}while(opcion!=0);
 	if (i==true)
