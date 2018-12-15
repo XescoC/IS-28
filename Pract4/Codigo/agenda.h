@@ -9,7 +9,7 @@
 
 class Agenda {
 private:
-	vector <Alumno> vector_;
+	list <Alumno> vector_;
 	
 public:
 	//Menu para que el usuario pueda elegir la opción que quiere realizar
