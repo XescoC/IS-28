@@ -4,6 +4,7 @@
 int main()
 {
 	int grupo;
+	bool i=false;
 	do{
 		opcion=menu();
 		switch(opcion){
@@ -24,7 +25,15 @@ int main()
 				cin >> grupo;
 				imprimirGrupo(grupo);
 				break;
+			case 6:
+				visualizarLista();
+				i=true;
 		}
 	}while(opcion!=0);
+	if (i==true)
+	{
+		//Abrir fichero markdown
+	}
+
 	return 0;
 }

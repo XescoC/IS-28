@@ -39,6 +39,7 @@ public:
 	void Agenda::editarAlumno();
 	int Agenda::printMenuEdit();
 	void Agenda::eliminarAlumno();
+	void Agenda::imprimirGrupo(int grupo);
 	
 
 

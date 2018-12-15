@@ -1,9 +1,9 @@
 #include "alumnos.h"
 #include "agenda.h"
 
-//Función que se encarga de imprimir los datos del alumno deseado.
+//Función que se encarga de imprimir los datos de todos los alumnos que pertenezcan al grupo pasado por parámetro.
 
-int Agenda::imprimirGrupo(int grupo){
+void Agenda::imprimirGrupo(int grupo){
 	list <Alumno>::iterator pos;
 	Alumno alum=NULL;
 	pos=vector_.begin();
