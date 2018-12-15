@@ -17,6 +17,15 @@ void Agenda::imprimirDatos()
 		cout<<"Curso:"<<alum.getCurso()<<endl;
 		cout<<"Fecha de nacimiento:"<<alum.getFecha()<<endl;
 		cout<<"Grupo:"<<alum.getGrupo()<<endl;
+		if (alum.getLider()==true)
+			{
+				lider="Sí";
+			}
+		else 
+		{
+			lider="No";
+		}
+		cout<<"Lider:"<<lider<<endl;
 	}
 	else
 	{
