@@ -20,9 +20,6 @@ Alumno Agenda::buscarAlumno()
 					break;
 			}
 		}while(opcion!=0);
-
-		
-	
 	return alum;
 }
 Alumno Agenda::buscarAlumnoDNI(string DNI)

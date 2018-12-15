@@ -29,15 +29,17 @@ public:
 		cin >> opcion;
 		return opcion;
 	}
-	int Agenda::buscarAlumno();
-	int Agenda::buscarAlumnoDNI(string DNI);
-	int Agenda::buscarAlumnoApellido(string apellido);
+	Alumno Agenda::buscarAlumno();
+	Alumno Agenda::buscarAlumnoDNI(string DNI);
+	Alumno Agenda::buscarAlumnoApellido(string apellido);
 	int Agenda::menuBuscarAlumno();
-	int Agenda::imprimirDatos();
+	void Agenda::imprimirDatos();
 	void Agenda::añadirAlumno();
+	bool Agenda::liderGrupo(int grupo);
 	void Agenda::editarAlumno();
+	int Agenda::printMenuEdit();
 	void Agenda::eliminarAlumno();
-	//FALTA CONTROL DE ERRORES DE VECTOR COMPLETO Y ERROR AL ENCONTRAR ALUMNO
+	
 
 
 	

@@ -4,9 +4,24 @@
 
 void Agenda::eliminarAlumno()
 {
-	int pos;
+	alum=buscarAlumno();
+	if (alum!=NULL)
+	{
+		list <Alumno>::iterator pos;
+		pos=vector_.begin();
+		for(pos = vector_.begin(); pos != vector_.end(); pos++)
+		{
+			if (pos->getDNI()==alum.getDNI())
+			{
+				pos->erase();
+				cout << "Borrado con éxito.\n";
+				return 0;
+			}
+		}
+	}
+	else
+	{
+		cout << "No se encontró ningun alumno."
+	}
 
-	pos = buscarAlumno();
-	alumnos.erase(pos);
-	cout << "Borrado con éxito\n";
 }
