@@ -3,6 +3,7 @@
 
 int main()
 {
+	int grupo;
 	do{
 		opcion=menu();
 		switch(opcion){
@@ -17,6 +18,11 @@ int main()
 				break;
 			case 4:
 				eliminarAlumno();
+				break;
+			case 5:
+				cout << "Introduce el número del grupo que desea buscar:";
+				cin >> grupo;
+				imprimirGrupo(grupo);
 				break;
 		}
 	}while(opcion!=0);

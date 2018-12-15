@@ -5,83 +5,60 @@
 //Función que se encarga de añadir el alumno.
 
 void Agenda::añadirAlumno(){
-	string dni;
-	string nombre;
-	string apellido1;
-	string apellido2;
-	string email;
-	string direccion;
-	int curso;
-	string fecha;
-	int grupo;
-	bool lider;
-	string opcion;
-
-
-int numero_alumno=0;
-for(int i=0; i<150; i++){
-		if(Alumno[i].DNI_!=NULL){	
-		 numero_alumno++;
-		}
-	}
+	Alumno alum;
+	int pos=0;
 
 	
-		cout<<"Introduzca el DNI: ";
+		cout<<"DNI: " << endl;
 		cin>>dni;
-		setDNI(dni);
-		getDNI();
+		alum.setDNI(dni);
 
-		cout<<"Introduzca el nombre del alumno: ";
+		cout<<"Nombre: " << endl;
 		cin>>nombre;
-		setNombre(nombre);
-		getNombre();
+		alum.setNombre(nombre);;
 
-		cout<<"Introduzca el primer apellido del alumno: ";
+		cout<<"Primer apellido: " << endl;
 		cin>>apellido1;
-		setApellido1(apellido1);
-		getApellido1();
+		alum.setApellido1(apellido1);
+		
 
-		cout<<"Introduzca el segundo apellido del alumno: ";
+		cout<<"Segundo apellido: " << endl;
 		cin>>apellido2;
-		setApellido2(apellido2);
-		getApellido2();
+		alum.setApellido2(apellido2);
 
 
-		cout<<"Introduzca el E-Mail del alumno: ";
+		cout<<"E-Mail: " << endl;
 		cin>>email;
-		setEmail(email);
-		getEmail();
+		alum.setEmail(email);
+		
 
-		cout<<"Introduzca la dirección del alumno: ";
+		cout<<"Dirección: ";
 		cin>>direccion;
-		setDireccion(direccion);
-		getDireccion();
+		alum.setDireccion(direccion);
 
-		cout<<"Introduzca el curso matriculado del alumno: ";
+		cout<<"Curso más alto matriculado: " << endl;
 		cin>>curso;
-		setCurso(curso);
-		getCurso();
+		alum.setCurso(curso);
 
-		cout<<"Introduzca la fecha de nacimiento del alumno: ";
+		cout<<"Fecha de nacimiento: " << endl;
 		cin>>fecha;
-		setFecha(fecha);
-		getFecha();
+		alum.setFecha(fecha);
 
-		cout<<"Introduzca el grupo del alumno: ";
+		cout<<"Grupo: " << endl;
 		cin>>grupo;
-		setGrupo(grupo);
-		getGrupo();
+		alum.setGrupo(grupo);
 
-		cout<<"¿Dicho alumno es líder? (Si/No): ";
+		cout<<"¿Dicho alumno es líder? (Si/No): " << endl;
 		cin>>opcion;
-				if(opcion=="Si"){
+				if(opcion=="Si" or opcion=="si"){
 					lider=true;
 				}
 				else{
 					lider=false;
 				}
-		setLider(lider);
-		getLider();
+		alum.setLider(lider);
+
+	vector_.push_back(alum);
 
 
 }

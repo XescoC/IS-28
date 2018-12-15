@@ -6,22 +6,31 @@ int Agenda::buscarAlumno()
 {
 	int i;
 	do{
-		opcion=menuBuscarAlumno();
-		switch(opcion){
-			case 1:
-				cout << "Introduzca el DNI del alumno:" << endl;
-				cin >> DNI;
-				i=buscarAlumnoDNI(DNI);
+		//Menu para elegir la manera en la que se desea buscar al alumno
+		do{
+			opcion=menuBuscarAlumno();
+			switch(opcion){
+				case 1:
+					cout << "Introduzca el DNI del alumno:" << endl;
+					cin >> DNI;
+					i=buscarAlumnoDNI(DNI);
+					break;
+				case 2:
+					cout << "Introduzca el primer apellido del alumno:" << endl;
+					cin >> apellido;
+					i=buscarAlumnoApellido(apellido);
+					break;
+			}
+		}while(opcion!=0);
 
-				break;
-			case 2:
-				cout << "Introduzca el primer apellido del alumno:" << endl;
-				cin >> apellido;
-				i=buscarAlumnoApellido(apellido);
-
-				break;
+		if (i==-1)
+		{
+			cout << "No se encontró ningun alumno con los datos introducidos." << endl;
 		}
-	}while(opcion!=0);
+		
+	}while(i!=-1);
+	//Bucle do-while que se ejecuta cada vez que no se encuentre ningun alumno
+	
 	return i;
 }
 int Agenda::buscarAlumnoDNI(string DNI)
@@ -30,22 +39,24 @@ int Agenda::buscarAlumnoDNI(string DNI)
 	tam=vector_.size();
 	for ( i = 0; i < tam; ++i)//HAY QUE CAMBIARLO
 	{
-		if (vector_[i].DNI==DNI)
+		if (vector_[i].DNI_==DNI)
 		{
 			return i;
 		}
 	}
-}	return -1;
+	return -1;
+}	
 
 int Agenda::buscarAlumnoApellido(string apellido)
 {
-	int i=-1, tam, contador=0;
+	int i, pos=-1, tam, contador=0;
 	tam=vector_.size();
 	for ( i = 0; i < tam; ++i)//HAY QUE CAMBIARLO
 	{
-		if (vector_[i].apellido1==apellido)
+		if (vector_[i].apellido1_==apellido)
 		{
 			contador ++;
+			pos=i;
 		}
 	}
 	//En caso de que encuentre 2 o mas alumnos con el mismo apellido ejecutara la funcion de buscar por DNI
@@ -54,12 +65,12 @@ int Agenda::buscarAlumnoApellido(string apellido)
 		string DNI;
 		cout << "Existe más un alumno con este apellido, introduzca su DNI:" <<endl;
 		cin >> DNI;
-		i=buscarAlumnoDNI(DNI);
-		return i;
+		pos=buscarAlumnoDNI(DNI);
+		return pos;
 	}
-	else
+	else 
 	{
-		return i;
+		return pos;
 	}
 }
 int Agenda::menuBuscarAlumno()
