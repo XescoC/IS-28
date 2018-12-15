@@ -33,33 +33,31 @@ int Agenda::buscarAlumno()
 	
 	return i;
 }
-Alumno Agenda::buscarAlumnoDNI(string DNI)
+int Agenda::buscarAlumnoDNI(string DNI)
 {
 	list <Alumno>::iterator pos;
-	Alumno alum=NULL;
 	pos=vector_.begin();
 	for(pos = vector_.begin(); pos != vector_.end(); pos++)
 	{
 		if (pos->getDNI()==DNI)
 		{
-			alum=pos;
-			return alum;
+			return pos;
 		}
 	}
-	return alum;
+	return -1;
 }	
 
-Alumno Agenda::buscarAlumnoApellido(string apellido)
+int Agenda::buscarAlumnoApellido(string apellido)
 {
 	int contador=0;
 	list <Alumno>::iterator pos;
-	Alumno alum=NULL;
+	int i=-1;
 	for(pos = vector_.begin(); pos != vector_.end(); pos++)
 	{
 		if (pos->getApellido1()==apellido)
 		{
 			contador ++;
-			alum=pos;
+			i=pos;
 		}
 	}
 	//En caso de que encuentre 2 o mas alumnos con el mismo apellido ejecutara la funcion de buscar por DNI
@@ -68,12 +66,12 @@ Alumno Agenda::buscarAlumnoApellido(string apellido)
 		string DNI;
 		cout << "Existe más un alumno con este apellido, introduzca su DNI:" <<endl;
 		cin >> DNI;
-		alum=buscarAlumnoDNI(DNI);
-		return alum;
+		i=buscarAlumnoDNI(DNI);
+		return i;
 	}
 	else
 	{
-		return alum;
+		return i;
 	}
 }
 int Agenda::menuBuscarAlumno()
