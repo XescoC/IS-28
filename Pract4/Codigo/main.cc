@@ -11,6 +11,7 @@ int main()
 	string pass;
 	string op="si";
 	Agenda a;
+	//Login que se encarga de pedir el usuario y la contraseña, comprueba que son correctos comparandolos con el fichero ususarios.txt y obtiene el id para saber si se trata de un coordinador o un ayudante
 	while(op=="Si" or op=="si")
 	{
 		ID=-1;
@@ -48,6 +49,7 @@ int main()
 		}
 	}
 	cout << "------" << endl;
+	//Menu del coordinador
 	if (ID==0)
 	{
 		do{
@@ -81,6 +83,7 @@ int main()
 			}
 		}while(opcion!=0);
 	}
+	//Menu del ayudante
 	if (ID==1)
 	{
 		do{

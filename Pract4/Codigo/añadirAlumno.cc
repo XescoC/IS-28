@@ -1,16 +1,19 @@
 #include "alumno.h"
 #include "agenda.h"
-
-
 //Función que se encarga de añadir el alumno.
-//Función que crea un objeto alumno en el que se añaden los valores con sus modificadores y se añade al final de la lista un vez terminado.
-//FALTA CONTROL DE ERRORES DE VECTOR COMPLETO
+//Crea un objeto alumno en el que se añaden los valores con sus modificadores y se añade al final de la lista un vez terminado.
 void Agenda::anadirAlumno(){
 	Alumno alum,aux;
 	Agenda a;
 	string dni, nombre, opcion, apellido1, apellido2, email, direccion, curso, fecha,GRUPO;
 	int grupo;
 	bool lider;
+	//CONTROL DE ERRORES DE VECTOR COMPLETO
+	if (vector_.size()>=149)
+	{
+		cout << "No se pueden añadir más alumnos, la base de datos esta completa." << endl;
+		return;
+	}
 	//Control de errores para que no se añadan dos alumnos con el mismo DNI ni se deje el campo en blanco ya que son campos obligatorios
 	do
 	{
@@ -38,7 +41,9 @@ void Agenda::anadirAlumno(){
 			cout << "Campo obligatorio."<< endl;
 		}
 	}while(nombre=="");
+	//Control de errores para campos obligatorios
 	alum.setNombre(nombre);;
+	
 	do
 	{
 		cout<<"Primer apellido: " << endl;

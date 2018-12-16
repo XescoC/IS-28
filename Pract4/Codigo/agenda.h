@@ -1,5 +1,5 @@
-//alumno.h
-//Código fuente que almacena la clase "Alumno".
+//agenda.h
+//Código fuente que almacena la clase "Agenda".
 
 #ifndef AGENDA_H
 #define AGENDA_H
@@ -53,7 +53,7 @@ public:
 	void buscarAlumnoApellido(string apellido, Alumno &alum);
 	int menuBuscarAlumno();
 	void imprimirDatos();
-	void anadirAlumno();//Control error tamaño max
+	void anadirAlumno();
 	bool liderGrupo(int grupo);
 	void editarAlumno();
 	int printMenuEdit();

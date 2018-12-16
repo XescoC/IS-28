@@ -1,7 +1,7 @@
 #include "alumno.h"
 #include "agenda.h"
 
-//Función que se encarga de cargar la lista de alumnos en un fichero binario.
+//Función que se encarga de cargar la lista de alumnos de un fichero binario a la lista vector_.
 void Agenda::cargarFichero()
 {
 	ifstream fichEntrada;
