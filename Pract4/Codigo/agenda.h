@@ -48,9 +48,9 @@ public:
 		cout << "------" << endl;
 		return opcion;
 	}
-	Alumno buscarAlumno();
-	Alumno buscarAlumnoDNI(string DNI);
-	Alumno buscarAlumnoApellido(string apellido);
+	void buscarAlumnoDNI(string DNI, Alumno &alum);
+	void buscarAlumnoDNIpos(string DNI, list <Alumno>::iterator &puntero);
+	void buscarAlumnoApellido(string apellido, Alumno &alum);
 	int menuBuscarAlumno();
 	void imprimirDatos();
 	void anadirAlumno();//Control error tamaño max

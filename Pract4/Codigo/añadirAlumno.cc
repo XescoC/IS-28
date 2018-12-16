@@ -17,7 +17,7 @@ void Agenda::anadirAlumno(){
 		cout<<"DNI: " << endl;
 		cin>>dni;
 		cin.ignore(256, '\n');
-		aux = a.buscarAlumnoDNI(dni);
+		a.buscarAlumnoDNI(dni, aux);
 		if (aux.getDNI()!="")
 		{
 			cout << "El DNI ya existe, por favor introduzca otro distinto." << endl;

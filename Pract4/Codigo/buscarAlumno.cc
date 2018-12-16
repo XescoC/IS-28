@@ -2,51 +2,35 @@
 #include "alumno.h"
 //Función que se encarga de buscar el alumno por DNI o por su primer apellido
 //Devuelve el objeto de la clase Alumno en la que se encuentra el alumno o si no encuentra ninguno devuelve un alumno con el DNI vacio
-Alumno Agenda::buscarAlumno()
-{
-	Alumno alum;
-	Agenda a;	
-	int opcion;
-	string DNI,apellido;
-		do{
-			opcion=a.menuBuscarAlumno();
-			switch(opcion){
-				case 1:
-					cout << "Introduzca el DNI del alumno:" << endl;
-					cin >> DNI;
-					alum=a.buscarAlumnoDNI(DNI);
-					return alum;
-					break;
-				case 2:
-					cout << "Introduzca el primer apellido del alumno:" << endl;
-					cin >> apellido;
-					alum=a.buscarAlumnoApellido(apellido);
-					return alum;
-					break;
-			}
-		}while(opcion!=0);
-	
-}
-Alumno Agenda::buscarAlumnoDNI(string DNI)
+
+void Agenda::buscarAlumnoDNI(string DNI, Alumno &alum)
 {
 	list <Alumno>::iterator pos;
-	Alumno alum;
 	for(pos = vector_.begin(); pos != vector_.end(); pos++)
 	{
-		alum=(*pos);
-		if (alum.getDNI()==DNI)
+		if (pos->getDNI()==DNI)
 		{
-			return alum;
+			alum = (*pos);
 		}
 	}
-	return alum;
 }	
 
-Alumno Agenda::buscarAlumnoApellido(string apellido)
+void Agenda::buscarAlumnoDNIpos(string DNI, list <Alumno>::iterator &puntero)
+{
+	list <Alumno>::iterator pos;
+	for(pos = vector_.begin(); pos != vector_.end(); pos++)
+	{
+		if (pos->getDNI()==DNI)
+		{
+			puntero = pos;
+		}
+	}
+}	
+
+void Agenda::buscarAlumnoApellido(string apellido, Alumno &alum)
 {
 	int contador=0;
 	list <Alumno>::iterator pos;
-	Alumno alum;
 	for(pos = vector_.begin(); pos != vector_.end(); pos++)
 	{
 		if (pos->getApellido1()==apellido)
@@ -62,12 +46,8 @@ Alumno Agenda::buscarAlumnoApellido(string apellido)
 		Agenda a;
 		cout << "Existe más un alumno con este apellido, introduzca su DNI:" <<endl;
 		cin >> DNI;
-		alum=a.buscarAlumnoDNI(DNI);
-		return alum;
-	}
-	else
-	{
-		return alum;
+		cin.ignore(256, '\n');
+		a.buscarAlumnoDNI(DNI, alum);
 	}
 }
 int Agenda::menuBuscarAlumno()
@@ -78,5 +58,6 @@ int Agenda::menuBuscarAlumno()
 	<< "	Opción 1: Por DNI" << endl 
 	<< "	Opción 2: Por apellido" << endl;
 	cin >> opcion;
+	cin.ignore(256, '\n');
 	return opcion;
 }

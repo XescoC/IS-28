@@ -7,8 +7,21 @@ void Agenda::imprimirDatos()
 {
 	Alumno alum;
 	Agenda a;
+	string DNI,apellido;
 	string lider;
-	alum = a.buscarAlumno();
+	switch(a.menuBuscarAlumno()){
+		case 1:
+		cout << "Introduzca el DNI del alumno:" << endl;
+		cin >> DNI;
+		cin.ignore(256, '\n');
+		buscarAlumnoDNI(DNI, alum);
+		break;
+		case 2:
+		cout << "Introduzca el primer apellido del alumno:" << endl;
+		getline(cin, apellido);
+		a.buscarAlumnoApellido(apellido, alum);
+		break;
+	}
 	if (alum.getDNI()=="")
 	{
 		cout << "No se encontró ningun alumno." <<endl;
