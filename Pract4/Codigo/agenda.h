@@ -35,7 +35,7 @@ public:
 	Alumno buscarAlumnoApellido(string apellido);
 	int menuBuscarAlumno();
 	void imprimirDatos();
-	void anadirAlumno();
+	void anadirAlumno();//Control error tamaño max
 	bool liderGrupo(int grupo);
 	void editarAlumno();
 	int printMenuEdit();

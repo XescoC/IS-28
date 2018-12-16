@@ -11,7 +11,7 @@ void Agenda::visualizarLista()
 	{
 		list <Alumno>::iterator pos;
 		Alumno alum;
-		int i;
+		int i=0;
 		fichSalida << "<!DOCTYPE html>" << endl;
 		fichSalida << "<html>\n\t<head>\n\t\t<title>Lista de alumnos</title>" << endl;
 		fichSalida << "\t</head>\n\t<body>\n\t\t<h1>Lista de alumnos</h1>" <<endl;
@@ -52,6 +52,7 @@ void Agenda::visualizarLista()
 			//Escribe en un fichero .md la información de cada alumno
 			
 			fichSalida <<"-----------"<<endl<<endl;
+			i++;
 		}
 		fichSalida << "\t</body>\n</html>" << endl;
 		system("xdg-open lista.html");

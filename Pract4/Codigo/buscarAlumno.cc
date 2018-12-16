@@ -15,30 +15,30 @@ Alumno Agenda::buscarAlumno()
 					cout << "Introduzca el DNI del alumno:" << endl;
 					cin >> DNI;
 					alum=a.buscarAlumnoDNI(DNI);
+					return alum;
 					break;
 				case 2:
 					cout << "Introduzca el primer apellido del alumno:" << endl;
 					cin >> apellido;
 					alum=a.buscarAlumnoApellido(apellido);
+					return alum;
 					break;
 			}
 		}while(opcion!=0);
-	return alum;
+	
 }
 Alumno Agenda::buscarAlumnoDNI(string DNI)
 {
 	list <Alumno>::iterator pos;
 	Alumno alum;
-	pos=vector_.begin();
 	for(pos = vector_.begin(); pos != vector_.end(); pos++)
 	{
-		if (pos->getDNI()==DNI)
+		alum=(*pos);
+		if (alum.getDNI()==DNI)
 		{
-			alum=(*pos);
 			return alum;
 		}
 	}
-	alum.setDNI("");
 	return alum;
 }	
 
@@ -63,11 +63,6 @@ Alumno Agenda::buscarAlumnoApellido(string apellido)
 		cout << "Existe más un alumno con este apellido, introduzca su DNI:" <<endl;
 		cin >> DNI;
 		alum=a.buscarAlumnoDNI(DNI);
-		return alum;
-	}
-	else if(contador==0)
-	{
-		alum.setDNI("");
 		return alum;
 	}
 	else

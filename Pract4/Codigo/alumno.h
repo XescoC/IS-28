@@ -24,6 +24,19 @@ private:
 	int grupo_;
 	bool lider_;
 public:
+	Alumno(string DNI="", string nombre="", string apellido1="", string apellido2="", string email="", string direccion="", int curso=0, string fecha="", int grupo=0, bool lider=false)
+	{
+		DNI_=DNI;
+		nombre_=nombre;
+		apellido1_=apellido1;
+		apellido2_=apellido2;
+		email_=email;
+		direccion_=direccion;
+		curso_=curso;
+		fecha_=fecha;
+		grupo_=grupo;
+		lider_=lider;
+	}
 	void setDNI(string dni){ DNI_ = dni; }
 	string getDNI(){ return DNI_; }
 	void setNombre(string nombre){ nombre_ = nombre; }

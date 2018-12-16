@@ -31,7 +31,7 @@ void Agenda::imprimirDatos()
 	}
 	else
 	{
-		cout << "No se encontró ningun alumno.";
+		cout << "No se encontró ningun alumno." <<endl;
 	}
 }
 
