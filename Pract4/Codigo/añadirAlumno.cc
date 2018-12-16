@@ -8,7 +8,7 @@
 void Agenda::anadirAlumno(){
 	Alumno alum,aux;
 	Agenda a;
-	string dni, nombre, opcion, apellido1, apellido2, email, direccion, curso, fecha;
+	string dni, nombre, opcion, apellido1, apellido2, email, direccion, curso, fecha,GRUPO;
 	int grupo;
 	bool lider;
 	//Control de errores para que no se añadan dos alumnos con el mismo DNI ni se deje el campo en blanco ya que son campos obligatorios
@@ -56,7 +56,7 @@ void Agenda::anadirAlumno(){
 		getline(cin, apellido2);
 		if (apellido2=="")
 		{
-			cout << "Campo obligatorio.";
+			cout << "Campo obligatorio." << endl;
 		}
 	}while(apellido2=="");		
 	alum.setApellido2(apellido2);
@@ -109,8 +109,9 @@ void Agenda::anadirAlumno(){
 
 	//Campo no obligatorio
 	cout<<"Grupo: " << endl;
-	cin>>grupo;
+	cin>>GRUPO;
 	cin.ignore(256, '\n');
+	grupo=atoi(GRUPO.c_str());
 	alum.setGrupo(grupo);
 
 	//Si existe un lider en el grupo se le asigna directamente como miembro, sino se le pregunta si es lider.
