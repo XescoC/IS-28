@@ -8,14 +8,15 @@
 void Agenda::anadirAlumno(){
 	Alumno alum,aux;
 	Agenda a;
-	string dni, nombre, opcion, apellido1, apellido2, email, direccion, fecha;
-	int grupo, curso;
+	string dni, nombre, opcion, apellido1, apellido2, email, direccion, curso, fecha;
+	int grupo;
 	bool lider;
 	//Control de errores para que no se añadan dos alumnos con el mismo DNI ni se deje el campo en blanco ya que son campos obligatorios
 	do
 	{
 		cout<<"DNI: " << endl;
 		cin>>dni;
+		cin.ignore(256, '\n');
 		aux = a.buscarAlumnoDNI(dni);
 		if (aux.getDNI()!="")
 		{
@@ -31,7 +32,7 @@ void Agenda::anadirAlumno(){
 	do
 	{
 		cout<<"Nombre: " << endl;
-		cin>>nombre;
+		getline(cin, nombre);
 		if (nombre=="")
 		{
 			cout << "Campo obligatorio."<< endl;
@@ -41,7 +42,7 @@ void Agenda::anadirAlumno(){
 	do
 	{
 		cout<<"Primer apellido: " << endl;
-		cin>>apellido1;
+		getline(cin, apellido1);
 		if (apellido1=="")
 		{
 			cout << "Campo obligatorio."<< endl;
@@ -52,7 +53,7 @@ void Agenda::anadirAlumno(){
 	do
 	{
 		cout<<"Segundo apellido: " << endl;
-		cin>>apellido2;
+		getline(cin, apellido2);
 		if (apellido2=="")
 		{
 			cout << "Campo obligatorio.";
@@ -64,6 +65,7 @@ void Agenda::anadirAlumno(){
 	{
 		cout<<"E-Mail: " << endl;
 		cin>>email;
+		cin.ignore(256, '\n');
 		if (email=="")
 		{
 			cout << "Campo obligatorio."<< endl;
@@ -74,7 +76,7 @@ void Agenda::anadirAlumno(){
 	do
 	{
 		cout<<"Dirección: "<< endl;
-		cin>>direccion;
+		getline(cin, direccion);
 		if (direccion=="")
 		{
 			cout << "Campo obligatorio."<< endl;
@@ -82,15 +84,22 @@ void Agenda::anadirAlumno(){
 	}while(direccion=="");
 	alum.setDireccion(direccion);
 
-	
-	cout<<"Curso más alto matriculado: " << endl;
-	cin>>curso;	
+	//MODIFICAR TODO LO DEMAS PARA QUE CURSO SEA STRING
+	do
+	{
+		cout<<"Curso más alto matriculado: " << endl;
+		cin >> curso;
+		cin.ignore(256, '\n');
+		if (curso=="")
+		{
+			cout << "Campo obligatorio."<< endl;
+		}
+	}while(curso=="");
 	alum.setCurso(curso);
-	
 	do
 	{
 		cout<<"Fecha de nacimiento: " << endl;
-		cin>>fecha;
+		getline(cin, fecha);
 		if (fecha=="")
 		{
 			cout << "Campo obligatorio."<< endl;
@@ -101,6 +110,7 @@ void Agenda::anadirAlumno(){
 	//Campo no obligatorio
 	cout<<"Grupo: " << endl;
 	cin>>grupo;
+	cin.ignore(256, '\n');
 	alum.setGrupo(grupo);
 
 	//Si existe un lider en el grupo se le asigna directamente como miembro, sino se le pregunta si es lider.
@@ -112,12 +122,13 @@ void Agenda::anadirAlumno(){
 	{
 		cout<<"¿Dicho alumno es líder? (Si/No): " << endl;
 		cin>>opcion;
-			if(opcion=="Si" or opcion=="si"){
+		cin.ignore(256, '\n');
+		if(opcion=="Si" or opcion=="si"){
 				lider=true;
-			}
-			else{
+		}
+		else{
 				lider=false;
-			}
+		}
 	}
 	alum.setLider(lider);
 

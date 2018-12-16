@@ -14,7 +14,7 @@ void Agenda::guardarFichero()
 		{
 			alum=(*pos);
 
-			//Escribe en un fichero .md la información de cada alumno
+			//Escribe en un fichero binario la información de cada alumno
 			//DNI,nombre,apellido1,apellido2,email,direccion,curso,fecha,grupo\n
 			fichSalida <<alum.getDNI()<<",";
 			fichSalida << alum.getNombre()<<",";
@@ -37,6 +37,6 @@ void Agenda::guardarFichero()
 	}
 	else
 	{
-		cout << "Error al crear el fichero markdown." << endl;
+		cout << "Error al crear el fichero binario." << endl;
 	}
 }

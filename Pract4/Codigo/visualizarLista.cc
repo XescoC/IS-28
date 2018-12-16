@@ -1,7 +1,7 @@
 #include "alumno.h"
 #include "agenda.h"
 
-//Función que se encarga de imprimir los datos de todos los alumnos y volcarlo a un fichero markdown.
+//Función que se encarga de imprimir los datos de todos los alumnos y volcarlo a un fichero HTML.
 void Agenda::visualizarLista()
 {
 	string lider;
@@ -19,6 +19,7 @@ void Agenda::visualizarLista()
 		for(pos = vector_.begin(); pos != vector_.end(); pos++)
 		{
 			alum=(*pos);
+			
 			//Escribe por pantalla la información de cada alumno
 			cout<<"DNI: "<<alum.getDNI()<<endl;
 			cout<<"Nombre: "<<alum.getNombre()<<endl;
@@ -39,6 +40,7 @@ void Agenda::visualizarLista()
 			cout<<"Lider:"<<lider<<endl;
 			cout << "-------------------------------------------------------------------"<<endl;
 
+			//Escribe en un fichero HTML la información de cada alumno
 			fichSalida << "\t\t<ul>\n\t\t\t<b>Alumno " << i+1 << "</b>" << endl;
 			fichSalida << "\t\t\t<li>DNI: " << alum.getDNI() << "</li>" << endl;
 			fichSalida << "\t\t\t<li>Nombre: " << alum.getNombre() << "</li>" << endl;
@@ -51,7 +53,6 @@ void Agenda::visualizarLista()
 			fichSalida << "\t\t\t<li>Lider: " << lider << "</li>\n\t\t</ul>" << endl;
 			fichSalida <<"----------------------------------------------------------------------------------------------------------"<<endl<<endl;
 			
-			//Escribe en un fichero .md la información de cada alumno
 			
 			i++;
 		}
@@ -60,6 +61,6 @@ void Agenda::visualizarLista()
 	}
 	else
 	{
-		cout << "Error al crear el fichero markdown." << endl;
+		cout << "Error al crear el fichero HTML." << endl;
 	}
 }

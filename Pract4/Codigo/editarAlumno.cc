@@ -1,5 +1,6 @@
 //editarAlumno.cc
 //Función que edita la información de un alumno
+//MODIFICAR CIN
 #include "agenda.h"
 #include "alumno.h"
  void Agenda::editarAlumno()
@@ -12,7 +13,7 @@
 	string apellido2;
 	string email;
 	string direccion;
-	int curso;
+	string curso;
 	string fecha;
 	int grupo;
 	Alumno alum;
@@ -34,27 +35,31 @@
 						case 1:
 							cout << "Introduzca el nuevo DNI: ";
 							cin >> dni;
+							cin.ignore(256, '\n');
 							cout << "El antiguo DNi es: '" << pos->getDNI() << "', y el nuevo es: '" << dni << "', ¿estás seguro de la modificación? (Y/N)\n";
 							cin >> aux;
+							cin.ignore(256, '\n');
 							if (aux == "Y" || aux == "y")
 								pos->setDNI(dni);
 						break;
 						case 2:
 							cout << "Introduzca el nuevo nombre: ";
-							cin >> nombre;
+							getline(cin, nombre);
 							cout << "El antiguo nombre es: '" << pos->getNombre() << "', y el nuevo es: '" << nombre << "', ¿estás seguro de la modificación? (Y/N)\n";
 							cin >> aux;
+							cin.ignore(256, '\n');
 							if (aux == "Y" || aux == "y")
 								pos->setNombre(nombre);
 						break;
 						case 3:
 							cout << "Introduzca el primer apellido: ";
-							cin >> apellido1;
+							getline(cin, apellido1);
 								
 							cout << "Introduzca el segundo apellido: ";
-							cin >> apellido2;
+							getline(cin, apellido2);
 							cout << "Los antiguos apellidos eran: '" << pos->getApellido1() << " " << pos->getApellido2() << "', y los nuevos son: '" << apellido1 << " " << apellido2 << "', ¿estás seguro de la modificación? (Y/N)\n";
 							cin >> aux;
+							cin.ignore(256, '\n');
 							if (aux == "Y" || aux == "y")
 								pos->setApellido1(apellido1);
 								pos->setApellido2(apellido2);
@@ -62,40 +67,48 @@
 						case 4:
 							cout << "Introduzca el nuevo email: ";
 							cin >> email;
+							cin.ignore(256, '\n');
 							cout << "El antiguo email es: '" << pos->getEmail() << "', y el nuevo es: '" << email << "', ¿estás seguro de la modificación? (Y/N)\n";
 							cin >> aux;
+							cin.ignore(256, '\n');
 							if (aux == "Y" || aux == "y")
 								pos->setEmail(email);
 						break;
 						case 5:
 							cout << "Introduzca la nueva dirección: ";
-							cin >> direccion;
+							getline(cin, direccion);
 							cout << "La antigua dirección es: '" << pos->getDireccion() << "', y el nuevo es: '" << direccion << "', ¿estás seguro de la modificación? (Y/N)\n";
 							cin >> aux;
+							cin.ignore(256, '\n');
 							if (aux == "Y" || aux == "y")
 								pos->setDireccion(direccion);
 						break;
 						case 6:
 							cout << "Introduzca el curso: ";
 							cin >> curso;
+							cin.ignore(256, '\n');
 							cout << "El antiguo curso más alto matriculado es: '" << pos->getCurso() << "', y el nuevo es: '" << curso << "', ¿estás seguro de la modificación? (Y/N)\n";
 							cin >> aux;
+							cin.ignore(256, '\n');
 							if (aux == "Y" || aux == "y")
 								pos->setCurso(curso);
 						break;
 						case 7:
 							cout << "Introduzca la nueva fecha de nacimiento: ";
-							cin >> fecha;
+							getline(cin, fecha);
 							cout << "La antigua fecha de nacimiento es: '" << pos->getFecha() << "', y el nuevo es: '" << fecha << "', ¿estás seguro de la modificación? (Y/N)\n";
 							cin >> aux;
+							cin.ignore(256, '\n');
 							if (aux == "Y" || aux == "y")
 								pos->setFecha(fecha);
 						break;
 						case 8:
 							cout << "Introduzca el nuevo número de grupo: ";
 							cin >> grupo;
+							cin.ignore(256, '\n');
 							cout << "El antiguo grupo es: '" << pos->getGrupo() << "', y el nuevo es: '" << grupo << "', ¿estás seguro de la modificación? (Y/N)\n";
 							cin >> aux;
+							cin.ignore(256, '\n');
 							if (aux == "Y" || aux == "y")
 								pos->setGrupo(grupo);
 						break;
@@ -111,6 +124,7 @@
 									{
 										cout << "¿Quiere que el alumno sea lider de su grupo? (Y/N)";
 										cin >> aux;
+										cin.ignore(256, '\n');
 										if (aux == "Y" || aux == "y")
 											pos->setLider(true);
 									}
@@ -119,6 +133,7 @@
 							{
 								cout << "¿Quiere que el alumno deje de ser lider de su grupo? (Y/N)\n";
 								cin >> aux;
+								cin.ignore(256, '\n');
 								if (aux == "Y" || aux == "y")
 									pos->setLider(false);
 							}
@@ -151,5 +166,6 @@ int Agenda::printMenuEdit()
 	cout << "8.- Grupo\n";
 	cout << "9.- Líder\n\n";
 	cin >> opcion;
+	cin.ignore(256, '\n');
 	return opcion;
 }

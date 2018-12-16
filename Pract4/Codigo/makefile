@@ -6,7 +6,8 @@ OBJ = añadirAlumno.o buscarAlumno.o cargarFichero.o editarAlumno.o eliminarAlum
 
 all : $(DEPS) $(OBJ)
 	$(CC) -o ProyectoFinal.exe $(OBJ) $(CFLAGS)
+	rm *.o
 %.o : %.cc $(DEPS)
 	$(CC) -c -o $@ $<
 clean :
-	rm *.exe *.o
+	rm *.exe

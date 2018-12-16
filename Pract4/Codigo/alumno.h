@@ -19,12 +19,12 @@ private:
 	string apellido2_;
 	string email_;
 	string direccion_;
-	int curso_;
+	string curso_;
 	string fecha_;
 	int grupo_;
 	bool lider_;
 public:
-	Alumno(string DNI="", string nombre="", string apellido1="", string apellido2="", string email="", string direccion="", int curso=0, string fecha="", int grupo=0, bool lider=false)
+	Alumno(string DNI="", string nombre="", string apellido1="", string apellido2="", string email="", string direccion="", string curso="", string fecha="", int grupo=0, bool lider=false)
 	{
 		DNI_=DNI;
 		nombre_=nombre;
@@ -49,8 +49,8 @@ public:
 	string getEmail(){ return email_; }
 	void setDireccion(string direccion){ direccion_ = direccion; }
 	string getDireccion(){ return direccion_; }
-	void setCurso(int curso){ curso_ = curso; }
-	int getCurso(){ return curso_; }
+	void setCurso(string curso){ curso_ = curso; }
+	string getCurso(){ return curso_; }
 	void setFecha(string fecha){ fecha_ = fecha; }
 	string getFecha(){ return fecha_; }
 	void setGrupo(int grupo){ grupo_ = grupo; }

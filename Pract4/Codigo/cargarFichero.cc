@@ -26,7 +26,7 @@ void Agenda::cargarFichero()
 			getline(fichEntrada,linea,',');
 			alum.setDireccion(linea);
 			getline(fichEntrada,linea,',');
-			alum.setCurso(atoi(linea.c_str()));
+			alum.setCurso(linea);
 			getline(fichEntrada,linea,',');
 			alum.setFecha(linea);
 			getline(fichEntrada,linea,',');
