@@ -1,5 +1,5 @@
 //eliminarAlumno.cc
-//Función que elimina del vector de la STL a un alumno
+//Función que elimina de la lista vector_ un alumno
 #include "agenda.h"
 #include "alumno.h"
 
@@ -24,7 +24,7 @@ void Agenda::eliminarAlumno()
 	}
 	else
 	{
-		cout << "No se encontró ningun alumno.";
+		cout << "No se encontró ningun alumno."<<endl;
 	}
 
 }
