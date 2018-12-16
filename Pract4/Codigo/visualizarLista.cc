@@ -15,6 +15,7 @@ void Agenda::visualizarLista()
 		fichSalida << "<!DOCTYPE html>" << endl;
 		fichSalida << "<html>\n\t<head>\n\t\t<title>Lista de alumnos</title>" << endl;
 		fichSalida << "\t</head>\n\t<body>\n\t\t<h1>Lista de alumnos</h1>" <<endl;
+		fichSalida << "----------------------------------------------------------------------------------------------------------" << endl;
 		for(pos = vector_.begin(); pos != vector_.end(); pos++)
 		{
 			alum=(*pos);
@@ -36,6 +37,7 @@ void Agenda::visualizarLista()
 				lider="No";
 			}
 			cout<<"Lider:"<<lider<<endl;
+			cout << "-------------------------------------------------------------------"<<endl;
 
 			fichSalida << "\t\t<ul>\n\t\t\t<b>Alumno " << i+1 << "</b>" << endl;
 			fichSalida << "\t\t\t<li>DNI: " << alum.getDNI() << "</li>" << endl;
@@ -46,12 +48,11 @@ void Agenda::visualizarLista()
 			fichSalida << "\t\t\t<li>Curso: " << alum.getCurso() << "</li>" << endl;
 			fichSalida << "\t\t\t<li>Fecha de nacimiento: " << alum.getFecha() << "</li>" << endl;
 			fichSalida << "\t\t\t<li>Grupo: " << alum.getGrupo() << "</li>" << endl;
-			fichSalida << "\t\t\t<li>Lider: " << lider << "</li>" << endl;
-			cout << "-------------"<<endl;
+			fichSalida << "\t\t\t<li>Lider: " << lider << "</li>\n\t\t</ul>" << endl;
+			fichSalida <<"----------------------------------------------------------------------------------------------------------"<<endl<<endl;
 			
 			//Escribe en un fichero .md la información de cada alumno
 			
-			fichSalida <<"-----------"<<endl<<endl;
 			i++;
 		}
 		fichSalida << "\t</body>\n</html>" << endl;
