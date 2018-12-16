@@ -21,65 +21,65 @@ void Agenda::anadirAlumno(){
 		{
 			cout << "El DNI ya existe, por favor introduzca otro distinto." << endl;
 		}
-		if (dni!="")
+		if (dni=="")
 		{
-			cout << "Campo obligatorio.";
+			cout << "Campo obligatorio." << endl;
 		}
-	}while(aux.getDNI()!="" and dni!="");
+	}while(aux.getDNI()!="" and dni=="");
 	alum.setDNI(dni);
 
 	do
 	{
 		cout<<"Nombre: " << endl;
 		cin>>nombre;
-		if (nombre!="")
+		if (nombre=="")
 		{
-			cout << "Campo obligatorio.";
+			cout << "Campo obligatorio."<< endl;
 		}
-	}while(nombre!="");
+	}while(nombre=="");
 	alum.setNombre(nombre);;
 	do
 	{
 		cout<<"Primer apellido: " << endl;
 		cin>>apellido1;
-		if (apellido1!="")
+		if (apellido1=="")
 		{
-			cout << "Campo obligatorio.";
+			cout << "Campo obligatorio."<< endl;
 		}
-	}while(apellido1!="");
+	}while(apellido1=="");
 	alum.setApellido1(apellido1);
 		
 	do
 	{
 		cout<<"Segundo apellido: " << endl;
 		cin>>apellido2;
-		if (apellido2!="")
+		if (apellido2=="")
 		{
 			cout << "Campo obligatorio.";
 		}
-	}while(apellido2!="");		
+	}while(apellido2=="");		
 	alum.setApellido2(apellido2);
 
 	do
 	{
 		cout<<"E-Mail: " << endl;
 		cin>>email;
-		if (email!="")
+		if (email=="")
 		{
-			cout << "Campo obligatorio.";
+			cout << "Campo obligatorio."<< endl;
 		}
-	}while(email!="");
+	}while(email=="");
 	alum.setEmail(email);
 		
 	do
 	{
-		cout<<"Dirección: ";
+		cout<<"Dirección: "<< endl;
 		cin>>direccion;
-		if (direccion!="")
+		if (direccion=="")
 		{
-			cout << "Campo obligatorio.";
+			cout << "Campo obligatorio."<< endl;
 		}
-	}while(direccion!="");
+	}while(direccion=="");
 	alum.setDireccion(direccion);
 
 	
@@ -91,11 +91,11 @@ void Agenda::anadirAlumno(){
 	{
 		cout<<"Fecha de nacimiento: " << endl;
 		cin>>fecha;
-		if (fecha!="")
+		if (fecha=="")
 		{
-			cout << "Campo obligatorio.";
+			cout << "Campo obligatorio."<< endl;
 		}
-	}while(fecha!="");
+	}while(fecha=="");
 	alum.setFecha(fecha);
 
 	//Campo no obligatorio
