@@ -1,4 +1,4 @@
-#include "alumnos.h"
+#include "alumno.h"
 #include "agenda.h"
 
 //Función que se encarga de imprimir los datos del alumno deseado.
@@ -6,8 +6,10 @@
 void Agenda::imprimirDatos()
 {
 	Alumno alum;
-	alum = buscarAlumno();
-	if (alum!=NULL)
+	Agenda a;
+	string lider;
+	alum = a.buscarAlumno();
+	if (alum.getDNI()!="")
 	{
 		cout<<"DNI:"<<alum.getDNI()<<endl;
 		cout<<"Nombre:"<<alum.getNombre()<<endl;
@@ -29,7 +31,7 @@ void Agenda::imprimirDatos()
 	}
 	else
 	{
-		cout << "No se encontró ningun alumno."
+		cout << "No se encontró ningun alumno.";
 	}
 }
 

@@ -3,36 +3,37 @@
 
 int main()
 {
-	int grupo;
+	int grupo, opcion;
 	bool i=false;
+	Agenda a;
 	do{
-		opcion=menu();
+		opcion=a.menu();
 		switch(opcion){
 			case 1:
-				imprimirDatos();
+				a.imprimirDatos();
 				break;
 			case 2:
-				añadirAlumno();
+				//a.añadirAlumno();
 				break;
 			case 3:
-				editarAlumno();
+				//a.editarAlumno();
 				break;
 			case 4:
-				eliminarAlumno();
+				//a.eliminarAlumno();
 				break;
 			case 5:
-				cout << "Introduce el número del grupo que desea buscar:";
-				cin >> grupo;
-				imprimirGrupo(grupo);
+				//cout << "Introduce el número del grupo que desea buscar:";
+				//cin >> grupo;
+				//a.imprimirGrupo(grupo);
 				break;
 			case 6:
-				visualizarLista();
-				i=true;
+				//a.visualizarLista();
+				//i=true;
 			case 7:
-				guardarFichero();
+				//a.guardarFichero();
 				break;
 			case 8:
-				cargarFichero();
+				//a.cargarFichero();
 				break;
 		}
 	}while(opcion!=0);

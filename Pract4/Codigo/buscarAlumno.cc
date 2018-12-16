@@ -1,22 +1,25 @@
 #include "agenda.h"
 #include "alumno.h"
 //Función que se encarga de buscar el alumno por DNI o por su primer apellido
-//Devuelve el objeto de la clase Alumno en la que se encuentra el alumno o NULL si no encuentra ninguno
+//Devuelve el objeto de la clase Alumno en la que se encuentra el alumno o si no encuentra ninguno devuelve un alumno con el DNI vacio
 Alumno Agenda::buscarAlumno()
 {
-	Alumno alum;	
+	Alumno alum;
+	Agenda a;	
+	int opcion;
+	string DNI,apellido;
 		do{
-			opcion=menuBuscarAlumno();
+			opcion=a.menuBuscarAlumno();
 			switch(opcion){
 				case 1:
 					cout << "Introduzca el DNI del alumno:" << endl;
 					cin >> DNI;
-					alum=buscarAlumnoDNI(DNI);
+					alum=a.buscarAlumnoDNI(DNI);
 					break;
 				case 2:
 					cout << "Introduzca el primer apellido del alumno:" << endl;
 					cin >> apellido;
-					alum=buscarAlumnoApellido(apellido);
+					alum=a.buscarAlumnoApellido(apellido);
 					break;
 			}
 		}while(opcion!=0);
@@ -25,7 +28,7 @@ Alumno Agenda::buscarAlumno()
 Alumno Agenda::buscarAlumnoDNI(string DNI)
 {
 	list <Alumno>::iterator pos;
-	Alumno alum=NULL;
+	Alumno alum;
 	pos=vector_.begin();
 	for(pos = vector_.begin(); pos != vector_.end(); pos++)
 	{
@@ -35,6 +38,7 @@ Alumno Agenda::buscarAlumnoDNI(string DNI)
 			return alum;
 		}
 	}
+	alum.setDNI("");
 	return alum;
 }	
 
@@ -42,7 +46,7 @@ Alumno Agenda::buscarAlumnoApellido(string apellido)
 {
 	int contador=0;
 	list <Alumno>::iterator pos;
-	Alumno alum=NULL;
+	Alumno alum;
 	for(pos = vector_.begin(); pos != vector_.end(); pos++)
 	{
 		if (pos->getApellido1()==apellido)
@@ -54,13 +58,19 @@ Alumno Agenda::buscarAlumnoApellido(string apellido)
 	//En caso de que encuentre 2 o mas alumnos con el mismo apellido ejecutara la funcion de buscar por DNI
 	if (contador > 1)
 	{
-		string DNI;
+		string DNI;	
+		Agenda a;
 		cout << "Existe más un alumno con este apellido, introduzca su DNI:" <<endl;
 		cin >> DNI;
-		alum=buscarAlumnoDNI(DNI);
+		alum=a.buscarAlumnoDNI(DNI);
 		return alum;
 	}
-	else 
+	else if(contador==0)
+	{
+		alum.setDNI("");
+		return alum;
+	}
+	else
 	{
 		return alum;
 	}
