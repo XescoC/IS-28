@@ -20,6 +20,4 @@
 
 10. Cargar fichero (2h)
 
-11. Guardar copia de seguridad (2h)
-
-12. Cargar copia de seguridad (2h)
+11. Corrección de errores (9h)
