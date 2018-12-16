@@ -1,7 +1,7 @@
 //editarAlumno.cc
 //Función que edita la información de un alumno
 #include "agenda.h"
-
+#include "alumno.h"
  void Agenda::editarAlumno()
 {
 	string aux, aux2;
@@ -15,8 +15,9 @@
 	int curso;
 	string fecha;
 	int grupo;
+	Alumno alum;
 	alum = buscarAlumno();
-	if (alum!=NULL)
+	if (alum.getDNI()!="")
 	{
 		list <Alumno>::iterator pos;
 		pos=vector_.begin();
@@ -125,13 +126,13 @@
 					}
 				}
 				cout << "De acuerdo, saliendo del modo edición...\n";
-				return 0;
+				return;
 			}
 		}
 	}
 	else
 	{
-		cout << "No se encontró ningun alumno."
+		cout << "No se encontró ningun alumno.";
 	}
 }
 

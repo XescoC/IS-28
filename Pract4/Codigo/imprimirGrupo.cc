@@ -5,22 +5,34 @@
 
 void Agenda::imprimirGrupo(int grupo){
 	list <Alumno>::iterator pos;
-	Alumno alum=NULL;
+	Alumno alum;
+	int contador=0;
+	string lider;
 	pos=vector_.begin();
 	cout << "Integrantes del grupo " << grupo << ":" << endl;
 	for(pos = vector_.begin(); pos != vector_.end(); pos++)
 	{
 		if (pos->getGrupo()==grupo)
 		{
+			alum=(*pos);
 			cout << "Integrante " << contador+1 << ":" << endl;
-			cout <<"	DNI:"<<vector_[i].DNI_<<endl;
-			cout <<"	Nombre:"<<vector_[i].nombre_<<endl;
-			cout <<"	Apellidos:"<<vector_[i].apellido1_<<" "<<vector_[i].apellido2_<<endl;
-			cout <<"	Email:"<<vector_[i].email_<<endl;
-			cout <<"	Direccion:"<<vector_[i].direccion_<<endl;
-			cout <<"	Curso:"<<vector_[i].curso_<<endl;
-			cout <<"	Fecha de nacimiento:"<<vector_[i].fecha_<<endl;
-			cout <<"	Grupo:"<<vector_[i].grupo_<<endl;
+			cout<<"	DNI:"<<alum.getDNI()<<endl;
+			cout<<"	Nombre:"<<alum.getNombre()<<endl;
+			cout<<"	Apellidos:"<<alum.getApellido1()<<" "<<alum.getApellido2()<<endl;
+			cout<<"	Email:"<<alum.getEmail()<<endl;
+			cout<<"	Direccion:"<<alum.getDireccion()<<endl;
+			cout<<"	Curso:"<<alum.getCurso()<<endl;
+			cout<<"	Fecha de nacimiento:"<<alum.getFecha()<<endl;
+			cout<<"	Grupo:"<<alum.getGrupo()<<endl;
+			if (alum.getLider()==true)
+				{
+					lider="Sí";
+				}
+			else 
+			{
+				lider="No";
+			}
+			cout<<"Lider:"<<lider<<endl;
 
 			contador ++;
 		}

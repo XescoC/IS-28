@@ -9,7 +9,7 @@ void Agenda::guardarFichero()
 	if (fichSalida)
 	{
 		list <Alumno>::iterator pos;
-		Alumno alum=NULL;
+		Alumno alum;
 		for(pos = vector_.begin(); pos != vector_.end(); pos++)
 		{
 			alum=(*pos);

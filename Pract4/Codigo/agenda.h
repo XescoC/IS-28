@@ -35,8 +35,7 @@ public:
 	Alumno buscarAlumnoApellido(string apellido);
 	int menuBuscarAlumno();
 	void imprimirDatos();
-	/*
-	void añadirAlumno();
+	void anadirAlumno();
 	bool liderGrupo(int grupo);
 	void editarAlumno();
 	int printMenuEdit();
@@ -45,10 +44,6 @@ public:
 	void visualizarLista();
 	void guardarFichero();
 	void cargarFichero();
-	*/
-	
-
-
 	
 };
 #endif

@@ -1,11 +1,14 @@
 //eliminarAlumno.cc
 //Función que elimina del vector de la STL a un alumno
 #include "agenda.h"
+#include "alumno.h"
 
 void Agenda::eliminarAlumno()
 {
-	alum=buscarAlumno();
-	if (alum!=NULL)
+	Alumno alum;
+	Agenda a;
+	alum=a.buscarAlumno();
+	if (alum.getDNI()!="")
 	{
 		list <Alumno>::iterator pos;
 		pos=vector_.begin();
@@ -13,15 +16,15 @@ void Agenda::eliminarAlumno()
 		{
 			if (pos->getDNI()==alum.getDNI())
 			{
-				pos->erase();
+				vector_.erase(pos);
 				cout << "Borrado con éxito.\n";
-				return 0;
+				return;
 			}
 		}
 	}
 	else
 	{
-		cout << "No se encontró ningun alumno."
+		cout << "No se encontró ningun alumno.";
 	}
 
 }

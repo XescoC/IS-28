@@ -9,7 +9,7 @@ void Agenda::cargarFichero()
 	if (fichEntrada)
 	{
 		list <Alumno>::iterator pos;
-		Alumno alum=NULL;
+		Alumno alum;
 		vector_.clear();
 		string linea;
 		bool lider;

@@ -5,23 +5,27 @@
 //Función que se encarga de añadir el alumno.
 //Función que crea un objeto alumno en el que se añaden los valores con sus modificadores y se añade al final de la lista un vez terminado.
 //FALTA CONTROL DE ERRORES DE VECTOR COMPLETO
-void Agenda::añadirAlumno(){
+void Agenda::anadirAlumno(){
 	Alumno alum,aux;
+	Agenda a;
+	string dni, nombre, opcion, apellido1, apellido2, email, direccion, fecha;
+	int grupo, curso;
+	bool lider;
 	//Control de errores para que no se añadan dos alumnos con el mismo DNI ni se deje el campo en blanco ya que son campos obligatorios
 	do
 	{
 		cout<<"DNI: " << endl;
 		cin>>dni;
-		aux = buscarAlumnoDNI(dni);
-		if (aux!=NULL)
+		aux = a.buscarAlumnoDNI(dni);
+		if (aux.getDNI()!="")
 		{
 			cout << "El DNI ya existe, por favor introduzca otro distinto." << endl;
 		}
 		if (dni!="")
 		{
-			cout << "Campo obligatorio."
+			cout << "Campo obligatorio.";
 		}
-	}while(aux!=NULL and dni!="");
+	}while(aux.getDNI()!="" and dni!="");
 	alum.setDNI(dni);
 
 	do
@@ -30,7 +34,7 @@ void Agenda::añadirAlumno(){
 		cin>>nombre;
 		if (nombre!="")
 		{
-			cout << "Campo obligatorio."
+			cout << "Campo obligatorio.";
 		}
 	}while(nombre!="");
 	alum.setNombre(nombre);;
@@ -40,7 +44,7 @@ void Agenda::añadirAlumno(){
 		cin>>apellido1;
 		if (apellido1!="")
 		{
-			cout << "Campo obligatorio."
+			cout << "Campo obligatorio.";
 		}
 	}while(apellido1!="");
 	alum.setApellido1(apellido1);
@@ -51,7 +55,7 @@ void Agenda::añadirAlumno(){
 		cin>>apellido2;
 		if (apellido2!="")
 		{
-			cout << "Campo obligatorio."
+			cout << "Campo obligatorio.";
 		}
 	}while(apellido2!="");		
 	alum.setApellido2(apellido2);
@@ -62,7 +66,7 @@ void Agenda::añadirAlumno(){
 		cin>>email;
 		if (email!="")
 		{
-			cout << "Campo obligatorio."
+			cout << "Campo obligatorio.";
 		}
 	}while(email!="");
 	alum.setEmail(email);
@@ -73,28 +77,23 @@ void Agenda::añadirAlumno(){
 		cin>>direccion;
 		if (direccion!="")
 		{
-			cout << "Campo obligatorio."
+			cout << "Campo obligatorio.";
 		}
 	}while(direccion!="");
 	alum.setDireccion(direccion);
 
-	do
-	{
-		cout<<"Curso más alto matriculado: " << endl;
-		cin>>curso;
-		if (curso!="")
-		{
-			cout << "Campo obligatorio."
-		}
-	}while(curso!="");
+	
+	cout<<"Curso más alto matriculado: " << endl;
+	cin>>curso;	
 	alum.setCurso(curso);
+	
 	do
 	{
 		cout<<"Fecha de nacimiento: " << endl;
 		cin>>fecha;
 		if (fecha!="")
 		{
-			cout << "Campo obligatorio."
+			cout << "Campo obligatorio.";
 		}
 	}while(fecha!="");
 	alum.setFecha(fecha);
@@ -105,7 +104,7 @@ void Agenda::añadirAlumno(){
 	alum.setGrupo(grupo);
 
 	//Si existe un lider en el grupo se le asigna directamente como miembro, sino se le pregunta si es lider.
-	if (liderGrupo(grupo)==true)
+	if (a.liderGrupo(grupo)==true)
 	{
 		lider=false;
 	}
@@ -130,13 +129,13 @@ void Agenda::añadirAlumno(){
 bool Agenda::liderGrupo(int grupo)
 {
 	list <Alumno>::iterator pos;
-	Alumno alum=NULL;
+	Alumno alum;
 	pos=vector_.begin();
 	for(pos = vector_.begin(); pos != vector_.end(); pos++)
 	{
 		if (pos->getGrupo()==grupo)
 		{
-			if (pos->getLider==true)
+			if (pos->getLider()==true)
 			{
 				return true;
 			}

@@ -10,7 +10,8 @@ void Agenda::visualizarLista()
 	if (fichSalida)
 	{
 		list <Alumno>::iterator pos;
-		Alumno alum=NULL;
+		Alumno alum;
+		int i;
 		fichSalida << "<!DOCTYPE html>" << endl;
 		fichSalida << "<html>\n\t<head>\n\t\t<title>Lista de alumnos</title>" << endl;
 		fichSalida << "\t</head>\n\t<body>\n\t\t<h1>Lista de alumnos</h1>" <<endl;

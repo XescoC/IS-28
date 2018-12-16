@@ -13,27 +13,26 @@ int main()
 				a.imprimirDatos();
 				break;
 			case 2:
-				//a.añadirAlumno();
+				a.anadirAlumno();
 				break;
 			case 3:
-				//a.editarAlumno();
+				a.editarAlumno();
 				break;
 			case 4:
-				//a.eliminarAlumno();
+				a.eliminarAlumno();
 				break;
 			case 5:
-				//cout << "Introduce el número del grupo que desea buscar:";
-				//cin >> grupo;
-				//a.imprimirGrupo(grupo);
+				cout << "Introduce el número del grupo que desea buscar:";
+				cin >> grupo;
+				a.imprimirGrupo(grupo);
 				break;
 			case 6:
-				//a.visualizarLista();
-				//i=true;
+				a.visualizarLista();
 			case 7:
-				//a.guardarFichero();
+				a.guardarFichero();
 				break;
 			case 8:
-				//a.cargarFichero();
+				a.cargarFichero();
 				break;
 		}
 	}while(opcion!=0);
