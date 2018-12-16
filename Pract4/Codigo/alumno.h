@@ -4,10 +4,11 @@
 #ifndef ALUMNO_H
 #define ALUMNO_H
 #include <string>
-#include <string>
 #include <cstdlib>
 #include <iostream>
-#include <vector>
+#include <list>
+#include <fstream>
+#include <string.h>
 using namespace std;
 
 class Alumno {

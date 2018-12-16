@@ -7,3 +7,5 @@ all : $(DEPS) $(OBJ)
 	$(CC) -o ProyectoFinal.exe $(OBJ) $(CFLAGS)
 %.o : %.cc $(DEPS)
 	$(CC) -o $@ $<
+clean :
+	rm *.x *.exe *.o

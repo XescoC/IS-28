@@ -26,24 +26,26 @@ public:
 		<< "Opción 7: Guardar fichero" << endl
 		<< "Opción 8: Cargar fichero" << endl
 		<< "Opción 9: Guardar copia de seguridad" << endl
-		<< "Opción 10: Cargar copia de seguridad" << endl
+		<< "Opción 10: Cargar copia de seguridad" << endl;
 		cin >> opcion;
 		return opcion;
 	}
-	Alumno Agenda::buscarAlumno();
-	Alumno Agenda::buscarAlumnoDNI(string DNI);
-	Alumno Agenda::buscarAlumnoApellido(string apellido);
-	int Agenda::menuBuscarAlumno();
-	void Agenda::imprimirDatos();
-	void Agenda::añadirAlumno();
-	bool Agenda::liderGrupo(int grupo);
-	void Agenda::editarAlumno();
-	int Agenda::printMenuEdit();
-	void Agenda::eliminarAlumno();
-	void Agenda::imprimirGrupo(int grupo);
-	void Agenda::visualizarLista();
-	void Agenda::guardarFichero();
-	void Agenda::cargarFichero();
+	Alumno buscarAlumno();
+	Alumno buscarAlumnoDNI(string DNI);
+	Alumno buscarAlumnoApellido(string apellido);
+	int menuBuscarAlumno();
+	void imprimirDatos();
+	/*
+	void añadirAlumno();
+	bool liderGrupo(int grupo);
+	void editarAlumno();
+	int printMenuEdit();
+	void eliminarAlumno();
+	void imprimirGrupo(int grupo);
+	void visualizarLista();
+	void guardarFichero();
+	void cargarFichero();
+	*/
 	
 
 
