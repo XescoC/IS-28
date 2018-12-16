@@ -13,21 +13,39 @@ private:
 	
 public:
 	//Menu para que el usuario pueda elegir la opción que quiere realizar
-	int menu()
+	int menu1()
 	{
 		int opcion;
-		cout << "Opción 0: Cerrar programa" << endl 
-		<< "Opción 1: Mostrar alumno" << endl
-		<< "Opción 2: Añadir alumno" << endl
-		<< "Opción 3: Editar alumno" << endl
-		<< "Opción 4: Eliminar alumno" << endl
-		<< "Opción 5: Mostrar grupo" <<endl
-		<< "Opción 6: Mostrar lista de alumnos" << endl
-		<< "Opción 7: Guardar fichero" << endl
-		<< "Opción 8: Cargar fichero" << endl
-		<< "Opción 9: Guardar copia de seguridad" << endl
-		<< "Opción 10: Cargar copia de seguridad" << endl;
+		cout << "OPCIONES COORDINADOR:" << endl;
+		cout << "	Opción 0: Cerrar programa" << endl 
+		<< "	Opción 1: Mostrar alumno" << endl
+		<< "	Opción 2: Añadir alumno" << endl
+		<< "	Opción 3: Editar alumno" << endl
+		<< "	Opción 4: Eliminar alumno" << endl
+		<< "	Opción 5: Mostrar grupo" <<endl
+		<< "	Opción 6: Mostrar lista de alumnos" << endl
+		<< "	Opción 7: Guardar fichero" << endl
+		<< "	Opción 8: Cargar fichero" << endl;
+		cout << "------" << endl;
 		cin >> opcion;
+		cout << "------" << endl;
+		return opcion;
+	}
+	int menu2()
+	{
+		int opcion;
+		cout << "OPCIONES AYUDANTE:" << endl;
+		cout << "	Opción 0: Cerrar programa" << endl 
+		<< "	Opción 1: Mostrar alumno" << endl
+		<< "	Opción 2: Añadir alumno" << endl
+		<< "	Opción 3: Editar alumno" << endl
+		<< "	Opción 4: Eliminar alumno" << endl
+		<< "	Opción 5: Mostrar grupo" <<endl
+		<< "	Opción 6: Mostrar lista de alumnos" << endl
+		<< "	Opción 7: Cargar fichero" << endl
+		<< "------" << endl;
+		cin >> opcion;
+		cout << "------" << endl;
 		return opcion;
 	}
 	Alumno buscarAlumno();

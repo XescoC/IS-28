@@ -9,7 +9,11 @@ void Agenda::imprimirDatos()
 	Agenda a;
 	string lider;
 	alum = a.buscarAlumno();
-	if (alum.getDNI()!="")
+	if (alum.getDNI()=="")
+	{
+		cout << "No se encontró ningun alumno." <<endl;
+	}
+	else
 	{
 		cout<<"DNI:"<<alum.getDNI()<<endl;
 		cout<<"Nombre:"<<alum.getNombre()<<endl;
@@ -28,10 +32,7 @@ void Agenda::imprimirDatos()
 			lider="No";
 		}
 		cout<<"Lider:"<<lider<<endl;
-	}
-	else
-	{
-		cout << "No se encontró ningun alumno." <<endl;
+		
 	}
 }
 

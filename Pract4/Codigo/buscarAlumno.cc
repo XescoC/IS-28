@@ -31,8 +31,11 @@ Alumno Agenda::buscarAlumnoDNI(string DNI)
 {
 	list <Alumno>::iterator pos;
 	Alumno alum;
+	int i=0;
 	for(pos = vector_.begin(); pos != vector_.end(); pos++)
 	{
+		cout << i << endl;
+		i++;
 		alum=(*pos);
 		if (alum.getDNI()==DNI)
 		{

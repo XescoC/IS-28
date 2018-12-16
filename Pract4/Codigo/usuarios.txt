@@ -1,0 +1,3 @@
+0,coordinador,contraseña1
+1,ayudante1,contraseña2
+1,ayudante2,contraseña3
