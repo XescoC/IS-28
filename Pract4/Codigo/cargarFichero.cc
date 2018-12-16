@@ -1,4 +1,4 @@
-#include "alumnos.h"
+#include "alumno.h"
 #include "agenda.h"
 
 //Función que se encarga de cargar la lista de alumnos en un fichero binario.

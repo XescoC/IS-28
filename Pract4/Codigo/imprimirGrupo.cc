@@ -1,4 +1,4 @@
-#include "alumnos.h"
+#include "alumno.h"
 #include "agenda.h"
 
 //Función que se encarga de imprimir los datos de todos los alumnos que pertenezcan al grupo pasado por parámetro.

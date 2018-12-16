@@ -1,4 +1,4 @@
-#include "alumnos.h"
+#include "alumno.h"
 #include "agenda.h"
 
 

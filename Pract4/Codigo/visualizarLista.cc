@@ -1,4 +1,4 @@
-#include "alumnos.h"
+#include "alumno.h"
 #include "agenda.h"
 
 //Función que se encarga de imprimir los datos de todos los alumnos y volcarlo a un fichero markdown.
@@ -6,12 +6,14 @@ void Agenda::visualizarLista()
 {
 	string lider;
 	ofstream fichSalida;
-	fichSalida.open("lista.md");
+	fichSalida.open("lista.html");
 	if (fichSalida)
 	{
 		list <Alumno>::iterator pos;
 		Alumno alum=NULL;
-		fichSalida << "##Lista de alumnos:" << endl << endl;
+		fichSalida << "<!DOCTYPE html>" << endl;
+		fichSalida << "<html>\n\t<head>\n\t\t<title>Lista de alumnos</title>" << endl;
+		fichSalida << "\t</head>\n\t<body>\n\t\t<h1>Lista de alumnos</h1>" <<endl;
 		for(pos = vector_.begin(); pos != vector_.end(); pos++)
 		{
 			alum=(*pos);
@@ -26,7 +28,7 @@ void Agenda::visualizarLista()
 			cout<<"Grupo: "<<alum.getGrupo()<<endl;
 			if (alum.getLider()==true)
 			{
-				lider="Sí";
+				lider="Si";
 			}
 			else 
 			{
@@ -34,21 +36,24 @@ void Agenda::visualizarLista()
 			}
 			cout<<"Lider:"<<lider<<endl;
 
-
+			fichSalida << "\t\t<ul>\n\t\t\t<b>Alumno " << i+1 << "</b>" << endl;
+			fichSalida << "\t\t\t<li>DNI: " << alum.getDNI() << "</li>" << endl;
+			fichSalida << "\t\t\t<li>Nombre: " << alum.getNombre() << "</li>" << endl;
+			fichSalida << "\t\t\t<li>Apellidos: " << alum.getApellido1() << " " << alum.getApellido2() << "</li>" << endl;
+			fichSalida << "\t\t\t<li>Email: " << alum.getEmail() << "</li>" << endl;
+			fichSalida << "\t\t\t<li>Direccion: " << alum.getDireccion() << "</li>" << endl;
+			fichSalida << "\t\t\t<li>Curso: " << alum.getCurso() << "</li>" << endl;
+			fichSalida << "\t\t\t<li>Fecha de nacimiento: " << alum.getFecha() << "</li>" << endl;
+			fichSalida << "\t\t\t<li>Grupo: " << alum.getGrupo() << "</li>" << endl;
+			fichSalida << "\t\t\t<li>Lider: " << lider << "</li>" << endl;
 			cout << "-------------"<<endl;
 			
 			//Escribe en un fichero .md la información de cada alumno
-			fichSalida << "DNI: "<<alum.getDNI()<<endl<<endl;
-			fichSalida << "Nombre: "<<alum.getNombre()<<endl;
-			fichSalida << "Apellidos: "<<alum.getApellido1()<<" "<<alum.getApellido2()<<endl<<endl;
-			fichSalida << "Email: "<<alum.getEmail()<<endl<<endl;
-			fichSalida << "Direccion: "<<alum.getDireccion()<<endl<<endl;
-			fichSalida << "Curso: "<<alum.getCurso()<<endl<<endl;
-			fichSalida << "Fecha de nacimiento: "<<alum.getFecha()<<endl;
-			fichSalida << "Grupo: "<<alum.getGrupo()<<endl<<endl;
-			fichSalida << "Lider: "<<lider<<endl<<endl;
+			
 			fichSalida <<"-----------"<<endl<<endl;
 		}
+		fichSalida << "\t</body>\n</html>" << endl;
+		system("xdg-open lista.html");
 	}
 	else
 	{
