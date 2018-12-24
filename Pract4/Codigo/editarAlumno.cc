@@ -32,19 +32,16 @@ void Agenda::editarAlumno()
 			switch(op)
 			{
 				case 1:
-				a.buscarAlumnoDNI(dni, alum);
 				cout << "Introduzca el nuevo DNI: ";
 				cin >> dni;
 				cin.ignore(256, '\n');
 				cout << "El antiguo DNi es: '" << puntero->getDNI() << "', y el nuevo es: '" << dni << "', ¿estás seguro de la modificación? (Y/N)\n";
 				cin >> aux;
 				cin.ignore(256, '\n');
-				if (aux == "Y" || aux == "y" && alum.getDNI()=""){
+				if (aux == "Y" || aux == "y"){
 					cout << "Cambio realizado con éxito" << endl;
 					puntero->setDNI(dni);
 				}
-				else
-					cout << "Ya existe un alumno con ese DNi" << endl;
 				break;
 				case 2:
 				cout << "Introduzca el nuevo nombre: ";
